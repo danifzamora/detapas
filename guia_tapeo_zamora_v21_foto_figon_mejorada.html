@@ -1,0 +1,3363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zamora de barra en barra | Guía de tapeo por Zamora</title>
+  <meta name="description" content="Guía visual para tapear por Zamora: ruta rápida, bares imprescindibles, tapas típicas, mapa por zonas y favoritos." />
+  <meta name="theme-color" content="#100907" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..900,40..100,0..1&family=Inter:wght@400;500;650;750;850;950&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#100907;
+      --bg-2:#17100c;
+      --ink:#f8ead1;
+      --ink-2:#cbb894;
+      --muted:#9f8f78;
+      --paper:#f4dfbd;
+      --paper-2:#fff4dc;
+      --wine:#761e24;
+      --wine-2:#b52e34;
+      --tomato:#d64b34;
+      --gold:#dba441;
+      --olive:#667347;
+      --clay:#b65b38;
+      --chalk:#fbf5e8;
+      --line:rgba(248,234,209,.16);
+      --line-dark:rgba(22,12,8,.2);
+      --shadow:0 30px 90px rgba(0,0,0,.45);
+      --shadow-paper:0 22px 60px rgba(20,10,6,.25);
+      --radius:28px;
+      --radius-sm:16px;
+      --container:1180px;
+      --display:"Bebas Neue", Impact, sans-serif;
+      --serif:"Fraunces", Georgia, serif;
+      --sans:"Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;background:var(--bg)}
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family:var(--sans);
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 10% -10%, rgba(181,46,52,.32), transparent 36rem),
+        radial-gradient(circle at 85% 6%, rgba(219,164,65,.18), transparent 32rem),
+        radial-gradient(circle at 60% 65%, rgba(102,115,71,.16), transparent 42rem),
+        linear-gradient(180deg, #100907 0%, #17100c 48%, #0d0706 100%);
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:-2;
+      opacity:.28;
+      background-image:
+        linear-gradient(rgba(255,246,226,.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,246,226,.05) 1px, transparent 1px),
+        radial-gradient(circle at center, rgba(255,246,226,.09) 0 1px, transparent 1px);
+      background-size:42px 42px,42px 42px,18px 18px;
+      mask-image:linear-gradient(to bottom, black, transparent 82%);
+    }
+
+    body::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:-1;
+      opacity:.22;
+      background:
+        repeating-linear-gradient(110deg, rgba(255,255,255,.03) 0 1px, transparent 1px 11px),
+        radial-gradient(circle at 50% 50%, transparent, rgba(0,0,0,.72));
+      mix-blend-mode:soft-light;
+    }
+
+    ::selection{background:var(--gold);color:#1a0f0a}
+    a{color:inherit;text-decoration:none}
+    button,input{font:inherit}
+    button{cursor:pointer}
+    img,svg{max-width:100%;display:block}
+    .container{width:min(var(--container), calc(100% - 36px));margin-inline:auto}
+
+    .progress{
+      position:fixed;
+      top:0;
+      left:0;
+      height:3px;
+      width:0;
+      z-index:999;
+      background:linear-gradient(90deg,var(--gold),var(--tomato),var(--wine-2));
+      box-shadow:0 0 28px rgba(219,164,65,.55);
+    }
+
+    .cursor-glow{
+      position:fixed;
+      width:280px;
+      height:280px;
+      border-radius:50%;
+      pointer-events:none;
+      z-index:2;
+      background:radial-gradient(circle, rgba(219,164,65,.11), transparent 62%);
+      transform:translate(-50%,-50%);
+      opacity:0;
+      transition:opacity .25s ease;
+      mix-blend-mode:screen;
+    }
+
+    .topbar{
+      position:fixed;
+      top:14px;
+      left:50%;
+      transform:translateX(-50%);
+      z-index:80;
+      width:min(var(--container), calc(100% - 28px));
+      border:1px solid rgba(248,234,209,.14);
+      border-radius:999px;
+      background:rgba(16,9,7,.72);
+      backdrop-filter:blur(22px);
+      box-shadow:0 18px 55px rgba(0,0,0,.28);
+    }
+
+    .topbar__inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+      padding:.52rem .62rem .52rem .95rem;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:.75rem;
+      min-width:0;
+      font-weight:950;
+      letter-spacing:-.04em;
+    }
+
+    .brand__mark{
+      width:44px;
+      height:34px;
+      display:block;
+      position:relative;
+      flex:0 0 auto;
+      border-radius:6px;
+      overflow:visible;
+      background:
+        linear-gradient(to bottom,
+          #1f8b57 0 11%,
+          rgba(244,223,189,.9) 11% 13%,
+          #8a1621 13% 22%,
+          rgba(244,223,189,.9) 22% 24%,
+          #8a1621 24% 33%,
+          rgba(244,223,189,.9) 33% 35%,
+          #8a1621 35% 44%,
+          rgba(244,223,189,.9) 44% 46%,
+          #8a1621 46% 55%,
+          rgba(244,223,189,.9) 55% 57%,
+          #8a1621 57% 66%,
+          rgba(244,223,189,.9) 66% 68%,
+          #8a1621 68% 77%,
+          rgba(244,223,189,.9) 77% 79%,
+          #8a1621 79% 88%,
+          rgba(244,223,189,.9) 88% 90%,
+          #8a1621 90% 100%);
+      clip-path:polygon(0 0, 78% 0, 100% 50%, 78% 100%, 0 100%);
+      box-shadow:0 10px 24px rgba(0,0,0,.24), inset 0 0 0 1px rgba(255,245,226,.22);
+    }
+    .brand__mark::before{
+      content:"";
+      position:absolute;
+      left:-7px;
+      top:-2px;
+      bottom:-2px;
+      width:4px;
+      border-radius:999px;
+      background:linear-gradient(180deg,#f1dfbc,#cfb489);
+      box-shadow:0 0 0 1px rgba(16,9,7,.2), 1px 0 10px rgba(0,0,0,.18);
+    }
+    .brand__mark::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      clip-path:polygon(0 0, 78% 0, 100% 50%, 78% 100%, 0 100%);
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.14), inset 0 -1px 0 rgba(0,0,0,.12);
+      border-radius:6px;
+    }
+
+    .brand__text{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--paper)}
+
+    .nav{
+      display:flex;
+      align-items:center;
+      gap:.18rem;
+    }
+
+    .nav a,
+    .nav button{
+      border:0;
+      background:transparent;
+      color:rgba(248,234,209,.72);
+      padding:.66rem .78rem;
+      border-radius:999px;
+      font-size:.78rem;
+      font-weight:850;
+      letter-spacing:-.01em;
+      transition:.18s ease;
+    }
+
+    .nav a:hover,
+    .nav a.is-active,
+    .nav button:hover{
+      background:rgba(248,234,209,.12);
+      color:var(--paper);
+    }
+
+    .nav .nav__primary{
+      background:var(--paper);
+      color:#140b08;
+      box-shadow:0 10px 28px rgba(244,223,189,.12);
+    }
+
+    .mobile-toggle{display:none}
+
+    .hero{
+      min-height:100svh;
+      position:relative;
+      display:grid;
+      align-items:center;
+      padding:8rem 0 4rem;
+      isolation:isolate;
+      overflow:hidden;
+    }
+
+    .hero::before{
+      content:"ZAMORA";
+      position:absolute;
+      right:-5vw;
+      top:7vh;
+      font-family:var(--display);
+      font-size:clamp(9rem,24vw,26rem);
+      line-height:.75;
+      color:transparent;
+      -webkit-text-stroke:1px rgba(248,234,209,.08);
+      z-index:-1;
+      letter-spacing:.02em;
+      transform:rotate(-6deg);
+    }
+
+    .hero__grid{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(360px,.72fr);
+      gap:clamp(2rem,5vw,5rem);
+      align-items:center;
+    }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:.62rem;
+      color:var(--gold);
+      text-transform:uppercase;
+      letter-spacing:.2em;
+      font-size:.72rem;
+      font-weight:950;
+    }
+    .kicker::before{
+      content:"";
+      width:48px;
+      height:1px;
+      background:var(--gold);
+      opacity:.9;
+    }
+
+    .hero h1{
+      margin:.75rem 0 1.2rem;
+      font-family:var(--display);
+      font-size:clamp(5.8rem,15vw,15rem);
+      line-height:.78;
+      letter-spacing:-.018em;
+      max-width:9ch;
+      text-transform:uppercase;
+    }
+
+    .hero h1 span{
+      display:block;
+    }
+    .hero h1 .stroke{
+      color:transparent;
+      -webkit-text-stroke:1.5px rgba(248,234,209,.82);
+      text-shadow:none;
+    }
+
+    .hero__lead{
+      max-width:690px;
+      font-family:var(--serif);
+      font-size:clamp(1.15rem,2.2vw,1.75rem);
+      line-height:1.28;
+      color:rgba(248,234,209,.84);
+      margin:0;
+    }
+
+    .hero__actions{
+      display:flex;
+      align-items:center;
+      gap:.7rem;
+      margin-top:1.7rem;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      min-height:50px;
+      border:1px solid rgba(248,234,209,.16);
+      border-radius:999px;
+      padding:.9rem 1.08rem;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:.6rem;
+      font-weight:950;
+      letter-spacing:-.02em;
+      background:rgba(248,234,209,.08);
+      color:var(--paper);
+      box-shadow:0 18px 45px rgba(0,0,0,.18);
+      transition:transform .2s ease, background .2s ease, color .2s ease;
+    }
+
+    .btn:hover{transform:translateY(-2px);background:rgba(248,234,209,.16)}
+    .btn--main{background:var(--paper);color:#140b08;border-color:var(--paper)}
+    .btn--main:hover{background:#fff4dc;color:#140b08}
+    .btn--ghost{background:transparent}
+
+    .hero__panel{
+      perspective:1200px;
+      min-height:600px;
+      display:grid;
+      place-items:center;
+      position:relative;
+    }
+
+    .poster{
+      position:relative;
+      width:min(440px,100%);
+      min-height:570px;
+      border-radius:38px;
+      background:
+        linear-gradient(165deg, rgba(244,223,189,.98), rgba(255,244,220,.9)),
+        repeating-linear-gradient(-8deg, transparent 0 10px, rgba(20,11,8,.035) 10px 11px);
+      color:#180d09;
+      box-shadow:var(--shadow);
+      transform:rotate(2deg);
+      transform-style:preserve-3d;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.22);
+    }
+
+    .poster::before,
+    .poster::after{
+      content:"";
+      position:absolute;
+      border-radius:50%;
+      background:var(--bg);
+      width:34px;
+      height:34px;
+      top:50%;
+      transform:translateY(-50%);
+      z-index:3;
+    }
+    .poster::before{left:-17px}
+    .poster::after{right:-17px}
+
+    .poster__top{
+      padding:1.25rem 1.25rem 0;
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:1rem;
+    }
+
+    .poster__stamp{
+      width:92px;
+      height:92px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      background:var(--wine);
+      color:var(--paper);
+      border:2px dashed rgba(244,223,189,.74);
+      font-family:var(--display);
+      font-size:1.28rem;
+      line-height:.88;
+      letter-spacing:.02em;
+      transform:rotate(-9deg) translateZ(30px);
+      box-shadow:0 18px 45px rgba(118,30,36,.35);
+    }
+
+    .poster__meta{
+      text-align:right;
+      text-transform:uppercase;
+      font-size:.68rem;
+      letter-spacing:.18em;
+      font-weight:950;
+      color:rgba(20,11,8,.58);
+    }
+
+    .dish-3d{
+      position:relative;
+      width:315px;
+      height:315px;
+      margin:1.4rem auto .7rem;
+      transform:translateZ(80px) rotateX(58deg) rotateZ(-16deg);
+      transform-style:preserve-3d;
+      filter:drop-shadow(0 34px 42px rgba(22,12,8,.28));
+    }
+
+    .dish-3d__plate{
+      position:absolute;
+      inset:0;
+      border-radius:50%;
+      background:
+        radial-gradient(circle at 46% 44%, #fff8e8 0 31%, #e2cba8 32% 35%, #fff8e8 36% 54%, #c29e72 55% 58%, #f5dfbd 59% 100%);
+      box-shadow:inset 0 -18px 35px rgba(70,38,20,.14), inset 0 8px 18px rgba(255,255,255,.8);
+    }
+    .dish-3d__plate::after{
+      content:"";
+      position:absolute;
+      inset:54px;
+      border-radius:50%;
+      border:2px solid rgba(118,30,36,.11);
+    }
+
+    .food-piece{
+      position:absolute;
+      transform-style:preserve-3d;
+      box-shadow:0 10px 18px rgba(22,12,8,.22);
+    }
+    .tortilla{
+      width:94px;height:72px;left:94px;top:86px;border-radius:24px 28px 18px 26px;
+      background:linear-gradient(135deg,#f3cb55,#c58622);
+      transform:translateZ(28px) rotate(-12deg);
+    }
+    .bravas{
+      width:62px;height:58px;left:172px;top:154px;border-radius:16px;
+      background:linear-gradient(135deg,#eac465,#b86a24);
+      transform:translateZ(35px) rotate(18deg);
+    }
+    .sauce{
+      width:54px;height:44px;left:182px;top:146px;border-radius:50%;
+      background:radial-gradient(circle at 32% 30%,#f37b45,#a92e24 70%);
+      transform:translateZ(47px);
+    }
+    .crest{
+      width:74px;height:42px;left:80px;top:178px;border-radius:50% 50% 18px 18px;
+      background:linear-gradient(135deg,#b46a34,#6e2d1d);
+      transform:translateZ(42px) rotate(-22deg);
+    }
+    .pincho{
+      width:94px;height:20px;left:132px;top:122px;border-radius:999px;
+      background:linear-gradient(90deg,#5f2d18,#c67837 34%,#471e14 60%,#d89a55);
+      transform:translateZ(58px) rotate(38deg);
+    }
+    .pincho::after{
+      content:"";position:absolute;right:-35px;top:8px;width:62px;height:3px;background:#8d5a34;border-radius:999px;
+    }
+
+    .poster__title{
+      padding:0 1.25rem;
+      font-family:var(--display);
+      font-size:clamp(4rem,7vw,5.8rem);
+      line-height:.78;
+      letter-spacing:-.02em;
+      margin:0;
+      text-transform:uppercase;
+    }
+    .poster__title small{
+      display:block;
+      font-family:var(--serif);
+      font-size:1.1rem;
+      line-height:1.1;
+      color:rgba(22,12,8,.58);
+      margin-top:.6rem;
+      text-transform:none;
+      letter-spacing:-.04em;
+    }
+
+    .poster__bottom{
+      position:absolute;
+      bottom:0;
+      left:0;
+      right:0;
+      padding:1.15rem 1.25rem;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:.65rem;
+      border-top:1px dashed rgba(22,12,8,.22);
+      background:rgba(20,11,8,.05);
+    }
+    .poster__bottom div{
+      border-right:1px solid rgba(22,12,8,.13);
+      padding-right:.55rem;
+    }
+    .poster__bottom div:last-child{border-right:0}
+    .poster__bottom strong{
+      display:block;
+      font-family:var(--display);
+      font-size:2.1rem;
+      line-height:.85;
+    }
+    .poster__bottom span{
+      display:block;
+      margin-top:.28rem;
+      font-size:.68rem;
+      text-transform:uppercase;
+      letter-spacing:.1em;
+      font-weight:900;
+      color:rgba(22,12,8,.62);
+    }
+
+    .marquee{
+      border-block:1px solid rgba(248,234,209,.14);
+      background:rgba(248,234,209,.045);
+      overflow:hidden;
+      white-space:nowrap;
+      transform:rotate(-1.2deg) scaleX(1.02);
+      margin:-1.5rem 0 2rem;
+    }
+    .marquee__track{
+      display:inline-flex;
+      gap:2.4rem;
+      padding:.72rem 0;
+      animation:marquee 28s linear infinite;
+      font-family:var(--display);
+      font-size:clamp(1.5rem,3.4vw,3.7rem);
+      letter-spacing:.02em;
+      color:rgba(248,234,209,.8);
+    }
+    .marquee__track span:nth-child(even){color:transparent;-webkit-text-stroke:1px rgba(248,234,209,.42)}
+    @keyframes marquee{to{transform:translateX(-50%)}}
+
+    section{padding:clamp(4.8rem,8vw,8rem) 0;position:relative}
+
+    .section-head{
+      display:grid;
+      grid-template-columns:minmax(0,.95fr) minmax(280px,.55fr);
+      gap:2rem;
+      align-items:end;
+      margin-bottom:2rem;
+    }
+    .section-head h2{
+      margin:.42rem 0 0;
+      font-family:var(--display);
+      font-size:clamp(4.2rem,11vw,10rem);
+      line-height:.78;
+      letter-spacing:-.018em;
+      text-transform:uppercase;
+    }
+    .section-head p{
+      margin:0 0 .5rem;
+      color:rgba(248,234,209,.72);
+      line-height:1.55;
+      font-size:1.02rem;
+    }
+
+    .street-mode{
+      display:grid;
+      grid-template-columns:1fr 1fr 1fr;
+      gap:1px;
+      background:rgba(248,234,209,.12);
+      border:1px solid rgba(248,234,209,.12);
+      border-radius:34px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+    .street-card{
+      min-height:280px;
+      padding:1.35rem;
+      background:
+        linear-gradient(145deg, rgba(244,223,189,.98), rgba(255,244,220,.88));
+      color:#170c08;
+      position:relative;
+      overflow:hidden;
+    }
+    .street-card:nth-child(2){background:linear-gradient(145deg,#742029,#421016);color:var(--paper)}
+    .street-card:nth-child(3){background:linear-gradient(145deg,#2a211a,#15100d);color:var(--paper)}
+    .street-card::after{
+      content:attr(data-no);
+      position:absolute;
+      right:-.2rem;
+      bottom:-.5rem;
+      font-family:var(--display);
+      font-size:11rem;
+      line-height:.8;
+      color:transparent;
+      -webkit-text-stroke:1px currentColor;
+      opacity:.12;
+    }
+    .street-card h3{
+      margin:0;
+      max-width:8ch;
+      font-family:var(--display);
+      font-size:3.8rem;
+      line-height:.82;
+      text-transform:uppercase;
+    }
+    .street-card p{margin:1rem 0 0;line-height:1.45;color:inherit;opacity:.74;max-width:28rem}
+
+    .route-layout{
+      display:grid;
+      grid-template-columns:minmax(290px,.42fr) minmax(0,1fr);
+      gap:1.2rem;
+      align-items:start;
+    }
+    .route-sticky{
+      position:sticky;
+      top:105px;
+      min-height:520px;
+      border-radius:34px;
+      padding:1.45rem;
+      background:
+        linear-gradient(180deg, rgba(118,30,36,.94), rgba(38,14,13,.96)),
+        radial-gradient(circle at 70% 20%, rgba(219,164,65,.26), transparent 18rem);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      border:1px solid rgba(248,234,209,.14);
+    }
+    .route-sticky::before{
+      content:"RUTA";
+      position:absolute;
+      bottom:-1.2rem;
+      left:-.3rem;
+      font-family:var(--display);
+      font-size:12rem;
+      line-height:.8;
+      color:transparent;
+      -webkit-text-stroke:1px rgba(248,234,209,.12);
+    }
+    .route-sticky h3{
+      position:relative;
+      margin:.6rem 0 1rem;
+      font-family:var(--display);
+      font-size:4.5rem;
+      line-height:.78;
+      text-transform:uppercase;
+    }
+    .route-sticky p{position:relative;color:rgba(248,234,209,.72);line-height:1.55;margin:0}
+    .route-sticky .btn{position:absolute;bottom:1.45rem;left:1.45rem;right:1.45rem}
+
+    .route-list{
+      display:grid;
+      gap:.9rem;
+    }
+    .route-stop{
+      display:grid;
+      grid-template-columns:92px minmax(150px,220px) minmax(0,1fr) auto;
+      gap:1rem;
+      align-items:center;
+      min-height:176px;
+      padding:1rem;
+      border-radius:30px;
+      background:rgba(244,223,189,.96);
+      color:#170c08;
+      box-shadow:var(--shadow-paper);
+      border:1px solid rgba(255,255,255,.18);
+      position:relative;
+      overflow:hidden;
+      transition:transform .25s ease, box-shadow .25s ease;
+    }
+    .route-stop:hover{transform:translateY(-4px);box-shadow:0 30px 80px rgba(20,10,6,.36)}
+    .route-stop::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:repeating-linear-gradient(-8deg, transparent 0 10px, rgba(20,11,8,.035) 10px 11px);
+      pointer-events:none;
+      mix-blend-mode:multiply;
+    }
+    .route-stop__no{
+      position:relative;
+      z-index:2;
+      font-family:var(--display);
+      font-size:6rem;
+      line-height:.75;
+      color:var(--wine);
+    }
+    .route-stop h4{
+      position:relative;
+      z-index:2;
+      margin:0;
+      font-family:var(--serif);
+      font-size:1.6rem;
+      letter-spacing:-.05em;
+    }
+    .route-stop p{position:relative;z-index:2;margin:.35rem 0 0;color:rgba(23,12,8,.68);line-height:1.45}
+
+    .route-stop__media{
+      position:relative;
+      z-index:2;
+      width:100%;
+      height:138px;
+      border-radius:22px;
+      overflow:hidden;
+      background:#170c08;
+      box-shadow:0 12px 34px rgba(23,12,8,.18);
+    }
+    .route-stop__media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter:saturate(1.04) contrast(1.04);
+      transform:scale(1.02);
+      transition:transform .45s ease, filter .45s ease;
+    }
+    .route-stop:hover .route-stop__media img{transform:scale(1.08);filter:saturate(1.12) contrast(1.06)}
+    .route-stop__media::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.5));
+      pointer-events:none;
+    }
+    .route-stop__content{position:relative;z-index:2}
+    .route-stop__ask{
+      margin:.55rem 0 0!important;
+      color:rgba(23,12,8,.78)!important;
+      font-weight:750;
+    }
+    .route-stop__ask strong{
+      color:var(--wine);
+      text-transform:uppercase;
+      letter-spacing:.1em;
+      font-size:.68rem;
+      margin-right:.35rem;
+    }
+
+    .walk-pill{
+      position:relative;
+      z-index:2;
+      padding:.5rem .7rem;
+      border-radius:999px;
+      background:#170c08;
+      color:var(--paper);
+      font-size:.72rem;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-weight:950;
+      white-space:nowrap;
+    }
+
+
+    .map-shell{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(300px,.42fr);
+      gap:1.1rem;
+      align-items:stretch;
+    }
+    .map-board{
+      min-height:690px;
+      border-radius:40px;
+      background:
+        radial-gradient(circle at 12% 10%, rgba(219,164,65,.14), transparent 18rem),
+        linear-gradient(135deg,#211912,#110b08);
+      border:1px solid rgba(248,234,209,.12);
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+      padding:1rem;
+      display:flex;
+      flex-direction:column;
+      gap:.9rem;
+    }
+    .google-map-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:1rem;
+      padding:.25rem .25rem 0;
+      color:rgba(248,234,209,.72);
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-size:.72rem;
+      font-weight:950;
+    }
+    .google-map-top strong{
+      color:var(--paper);
+      letter-spacing:.02em;
+      text-transform:none;
+      font-size:.9rem;
+    }
+    .map-frame-wrap{
+      flex:1;
+      min-height:455px;
+      border-radius:32px;
+      overflow:hidden;
+      border:1px solid rgba(248,234,209,.14);
+      background:#170c08;
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.04), 0 24px 70px rgba(0,0,0,.32);
+      position:relative;
+    }
+    .map-frame-wrap::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);
+      border-radius:32px;
+    }
+    .google-map{
+      width:100%;
+      height:100%;
+      min-height:455px;
+      border:0;
+      filter:saturate(.86) contrast(1.02);
+    }
+    .map-control-strip{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:.55rem;
+    }
+    .map-zone-button,
+    .map-pin-button{
+      border:1px solid rgba(248,234,209,.14);
+      background:rgba(248,234,209,.07);
+      color:rgba(248,234,209,.86);
+      border-radius:18px;
+      padding:.72rem .78rem;
+      text-align:left;
+      font-weight:950;
+      letter-spacing:-.03em;
+      transition:.2s ease;
+    }
+    .map-zone-button small,
+    .map-pin-button small{
+      display:block;
+      margin-top:.08rem;
+      color:rgba(248,234,209,.48);
+      font-size:.62rem;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .map-zone-button:hover,
+    .map-zone-button.is-active,
+    .map-pin-button:hover,
+    .map-pin-button.is-active{
+      background:var(--paper);
+      color:#170c08;
+      transform:translateY(-2px);
+    }
+    .map-zone-button:hover small,
+    .map-zone-button.is-active small,
+    .map-pin-button:hover small,
+    .map-pin-button.is-active small{color:rgba(23,12,8,.56)}
+    .map-pin-row{
+      display:flex;
+      gap:.5rem;
+      overflow-x:auto;
+      padding-bottom:.15rem;
+      scrollbar-width:thin;
+    }
+    .map-pin-button{
+      flex:0 0 auto;
+      min-width:138px;
+    }
+    .map-panel{
+      border-radius:40px;
+      background:rgba(244,223,189,.96);
+      color:#170c08;
+      box-shadow:var(--shadow-paper);
+      padding:1.25rem;
+      position:relative;
+      overflow:hidden;
+    }
+    .map-panel::after{
+      content:"MAPS";
+      position:absolute;
+      right:-.6rem;
+      bottom:-.8rem;
+      font-family:var(--display);
+      font-size:8rem;
+      color:transparent;
+      -webkit-text-stroke:1px rgba(23,12,8,.12);
+    }
+    .map-panel h3{font-family:var(--display);font-size:3.8rem;line-height:.82;margin:0 0 1rem;text-transform:uppercase}
+    .map-panel p{color:rgba(23,12,8,.68);line-height:1.5;margin:0 0 1rem}
+    .map-actions{display:grid;gap:.6rem;position:relative;z-index:2}
+    .map-action{
+      border:1px solid rgba(23,12,8,.12);
+      background:rgba(23,12,8,.06);
+      border-radius:18px;
+      padding:.9rem;
+      color:#170c08;
+      text-align:left;
+      font-weight:850;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:1rem;
+    }
+    .map-action:hover{background:#170c08;color:var(--paper)}
+
+    .tapas-bento{
+      display:grid;
+      grid-template-columns:1.15fr .85fr .85fr;
+      grid-auto-rows:minmax(240px,auto);
+      gap:1rem;
+    }
+    .tapa-card{
+      border-radius:34px;
+      padding:1.25rem;
+      background:rgba(244,223,189,.96);
+      color:#170c08;
+      box-shadow:var(--shadow-paper);
+      position:relative;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.16);
+    }
+    .tapa-card:nth-child(1){grid-row:span 2;background:linear-gradient(150deg,#f4dfbd,#fff4dc)}
+    .tapa-card:nth-child(3){background:linear-gradient(150deg,#761e24,#3a1012);color:var(--paper)}
+    .tapa-card:nth-child(5){background:linear-gradient(150deg,#2c251d,#15100d);color:var(--paper)}
+    .tapa-card::after{
+      content:attr(data-label);
+      position:absolute;
+      right:-.4rem;
+      bottom:-.6rem;
+      font-family:var(--display);
+      font-size:7.5rem;
+      line-height:.8;
+      color:transparent;
+      -webkit-text-stroke:1px currentColor;
+      opacity:.1;
+    }
+    .tapa-card h3{
+      position:relative;z-index:2;
+      font-family:var(--display);
+      font-size:clamp(3rem,5vw,5.5rem);
+      line-height:.78;
+      text-transform:uppercase;
+      margin:0 0 .8rem;
+      max-width:8ch;
+    }
+    .tapa-card p{position:relative;z-index:2;margin:0;color:inherit;opacity:.72;line-height:1.5;max-width:30rem}
+    .tapa-card .where{
+      position:absolute;left:1.25rem;bottom:1.25rem;right:1.25rem;
+      border-top:1px dashed currentColor;
+      padding-top:.8rem;
+      font-size:.76rem;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-weight:950;
+      opacity:.72;
+    }
+
+    .photo-credit{
+      position:absolute;
+      right:.75rem;
+      bottom:.7rem;
+      z-index:4;
+      border-radius:999px;
+      padding:.32rem .5rem;
+      background:rgba(16,9,7,.72);
+      color:rgba(255,244,220,.86);
+      font-size:.58rem;
+      line-height:1;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      font-weight:950;
+      backdrop-filter:blur(12px);
+    }
+    .tapa-card--photo{
+      padding:0;
+      display:flex;
+      flex-direction:column;
+      min-height:360px;
+      background:rgba(244,223,189,.98)!important;
+      color:#170c08!important;
+    }
+    .tapa-card__media{
+      position:relative;
+      height:178px;
+      overflow:hidden;
+      background:#170c08;
+    }
+    .tapa-card__media::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.44));
+      pointer-events:none;
+    }
+    .tapa-card__media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter:saturate(1.02) contrast(1.04);
+      transform:scale(1.02);
+      transition:transform .45s ease, filter .45s ease;
+    }
+    .tapa-card--photo:hover .tapa-card__media img{transform:scale(1.08);filter:saturate(1.12) contrast(1.06)}
+    .tapa-card--photo h3{
+      padding:1.05rem 1.2rem 0;
+      margin:0 0 .65rem;
+      max-width:9ch;
+    }
+    .tapa-card--photo p{
+      padding:0 1.2rem;
+      color:rgba(23,12,8,.72);
+      opacity:1;
+    }
+    .tapa-card--photo .where{
+      position:static;
+      margin:auto 1.2rem 1.15rem;
+      color:rgba(23,12,8,.66);
+      opacity:1;
+    }
+
+
+    #visuales{
+      background:
+        radial-gradient(circle at 80% 0%, rgba(219,164,65,.08), transparent 20rem),
+        linear-gradient(180deg, rgba(244,223,189,.03), transparent 12rem);
+    }
+    .visual-grid{
+      display:grid;
+      grid-template-columns:repeat(12,minmax(0,1fr));
+      grid-auto-rows:96px;
+      gap:1rem;
+      align-items:stretch;
+    }
+    .visual-shot{
+      position:relative;
+      margin:0;
+      border-radius:30px;
+      overflow:hidden;
+      background:#170c08;
+      min-height:0;
+      box-shadow:0 28px 80px rgba(0,0,0,.34);
+      border:1px solid rgba(248,234,209,.12);
+      transform-style:preserve-3d;
+      isolation:isolate;
+    }
+    .visual-shot:nth-child(1){grid-column:span 6;grid-row:span 4}
+    .visual-shot:nth-child(2){grid-column:span 3;grid-row:span 2}
+    .visual-shot:nth-child(3){grid-column:span 3;grid-row:span 2}
+    .visual-shot:nth-child(4){grid-column:span 4;grid-row:span 3}
+    .visual-shot:nth-child(5){grid-column:span 4;grid-row:span 3}
+    .visual-shot:nth-child(6){grid-column:span 4;grid-row:span 3}
+    .visual-shot img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter:saturate(1.04) contrast(1.04);
+      transform:scale(1.02);
+      transition:transform .5s ease, filter .4s ease;
+    }
+    .visual-shot::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, rgba(0,0,0,.04) 0%, rgba(0,0,0,.18) 35%, rgba(0,0,0,.82) 100%);
+      z-index:1;
+      pointer-events:none;
+    }
+    .visual-shot::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      border-radius:30px;
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.06);
+      z-index:2;
+      pointer-events:none;
+    }
+    .visual-shot:hover img{transform:scale(1.08);filter:saturate(1.12) contrast(1.06)}
+    .visual-shot__bar{
+      position:absolute;
+      left:1rem;
+      right:1rem;
+      bottom:1rem;
+      z-index:3;
+      display:flex;
+      flex-direction:column;
+      gap:.22rem;
+      padding:1rem 1.05rem;
+      border-radius:22px;
+      background:linear-gradient(180deg, rgba(16,9,7,.54), rgba(16,9,7,.88));
+      backdrop-filter:blur(14px);
+      border:1px solid rgba(248,234,209,.1);
+      box-shadow:0 10px 30px rgba(0,0,0,.25);
+      max-width:calc(100% - 2rem);
+    }
+    .visual-shot__bar strong{
+      display:block;
+      color:var(--paper);
+      font-family:var(--serif);
+      font-size:clamp(1.2rem,2vw,1.65rem);
+      line-height:1;
+      letter-spacing:-.04em;
+    }
+    .visual-shot__bar span{
+      display:block;
+      color:rgba(248,234,209,.72);
+      font-size:.78rem;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+    }
+    .visual-note{
+      margin:1rem 0 0;
+      padding:1rem 1.1rem;
+      border-radius:20px;
+      background:rgba(248,234,209,.06);
+      border:1px solid rgba(248,234,209,.12);
+      color:rgba(248,234,209,.64);
+      line-height:1.5;
+      font-size:.92rem;
+      max-width:860px;
+    }
+
+    .bars-section{
+      background:
+        linear-gradient(180deg, rgba(244,223,189,.04), transparent 10rem),
+        linear-gradient(180deg, transparent, rgba(118,30,36,.13));
+    }
+    .toolbox{
+      display:grid;
+      gap:.9rem;
+      padding:1rem;
+      border-radius:32px;
+      background:rgba(248,234,209,.07);
+      border:1px solid rgba(248,234,209,.12);
+      box-shadow:var(--shadow);
+      margin-bottom:1rem;
+      backdrop-filter:blur(16px);
+    }
+    .search-row{
+      display:grid;
+      grid-template-columns:1fr auto auto;
+      gap:.7rem;
+      align-items:center;
+    }
+    .search{
+      min-height:54px;
+      width:100%;
+      border:1px solid rgba(248,234,209,.14);
+      border-radius:999px;
+      background:rgba(16,9,7,.72);
+      color:var(--paper);
+      padding:0 1.1rem;
+      outline:none;
+      font-weight:750;
+    }
+    .search:focus{border-color:rgba(219,164,65,.7);box-shadow:0 0 0 4px rgba(219,164,65,.12)}
+    .counter{
+      min-height:54px;
+      display:grid;place-items:center;
+      border-radius:999px;
+      padding:0 1rem;
+      background:var(--paper);
+      color:#170c08;
+      font-weight:950;
+      white-space:nowrap;
+    }
+    .chip-groups{display:grid;gap:.75rem}
+    .chip-row{display:flex;gap:.45rem;flex-wrap:wrap;align-items:center}
+    .chip-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;color:rgba(248,234,209,.52);font-weight:950;margin-right:.4rem;min-width:58px}
+    .chip{
+      border:1px solid rgba(248,234,209,.13);
+      background:rgba(248,234,209,.06);
+      color:rgba(248,234,209,.78);
+      border-radius:999px;
+      padding:.55rem .78rem;
+      font-size:.78rem;
+      font-weight:850;
+      transition:.16s ease;
+    }
+    .chip:hover,.chip.is-active{background:var(--paper);color:#170c08;border-color:var(--paper)}
+
+    .bars-grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:1rem;
+      align-items:stretch;
+    }
+
+    #barsGrid:empty::before{
+      content:"No se han cargado los bares. Recarga la página o abre el archivo en un navegador.";
+      display:block;
+      padding:1.2rem;
+      border-radius:22px;
+      background:rgba(248,234,209,.08);
+      border:1px solid rgba(248,234,209,.14);
+      color:rgba(248,234,209,.72);
+      font-weight:850;
+    }
+
+    .bar-card{
+      min-height:342px;
+      border-radius:32px;
+      background:rgba(244,223,189,.96);
+      color:#170c08;
+      box-shadow:var(--shadow-paper);
+      position:relative;
+      overflow:hidden;
+      transform-style:preserve-3d;
+      transition:opacity .2s ease, transform .25s ease, box-shadow .25s ease;
+      border:1px solid rgba(255,255,255,.16);
+    }
+    .bar-card[hidden]{display:none}
+    .bar-card:hover{box-shadow:0 34px 84px rgba(20,10,6,.42)}
+    .bar-card__art{
+      height:118px;
+      background:
+        radial-gradient(circle at 24% 34%, rgba(219,164,65,.92) 0 18px, transparent 19px),
+        radial-gradient(circle at 60% 48%, rgba(181,46,52,.84) 0 22px, transparent 23px),
+        radial-gradient(circle at 82% 30%, rgba(102,115,71,.72) 0 16px, transparent 17px),
+        linear-gradient(135deg,#2b1b13,#7a1e24);
+      position:relative;
+      overflow:hidden;
+    }
+    .bar-card__art::after{
+      content:"";
+      position:absolute;inset:0;
+      background:repeating-linear-gradient(-12deg, rgba(255,255,255,.08) 0 1px, transparent 1px 15px);
+      mix-blend-mode:screen;
+    }
+
+    .bar-card__art.has-image{
+      background:#170c08;
+    }
+    .bar-card__art.has-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter:saturate(1.04) contrast(1.08);
+      transform:scale(1.02);
+      transition:transform .45s ease, filter .45s ease;
+    }
+    .bar-card:hover .bar-card__art.has-image img{transform:scale(1.08);filter:saturate(1.16) contrast(1.08)}
+    .bar-card__art.has-image::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:1;
+      background:linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.42));
+      pointer-events:none;
+    }
+    .bar-card__art.has-image::after{z-index:2;opacity:.35}
+    .bar-card__art .photo-credit{z-index:3}
+    .bar-card__body{padding:1rem;position:relative;z-index:2}
+    .bar-card__top{display:flex;justify-content:space-between;gap:.8rem;align-items:flex-start;margin-bottom:.7rem}
+    .bar-card__no{font-family:var(--display);font-size:3.7rem;line-height:.78;color:var(--wine);letter-spacing:-.02em}
+    .fav{
+      width:42px;height:42px;border-radius:50%;border:1px solid rgba(23,12,8,.12);background:rgba(23,12,8,.05);display:grid;place-items:center;color:#170c08;font-size:1.25rem;transition:.16s ease;
+    }
+    .fav.is-active{background:var(--wine);color:var(--paper);border-color:var(--wine)}
+    .bar-card h3{font-family:var(--serif);font-size:1.56rem;line-height:1;letter-spacing:-.06em;margin:0 0 .55rem}
+    .verdict{font-size:.94rem;line-height:1.42;color:rgba(23,12,8,.7);margin:0 0 .8rem}
+    .meta-line{display:flex;gap:.35rem;flex-wrap:wrap;margin-bottom:.8rem}
+    .tag{display:inline-flex;border-radius:999px;padding:.35rem .5rem;background:rgba(23,12,8,.07);font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;font-weight:950;color:rgba(23,12,8,.62)}
+    .bar-card dl{display:grid;gap:.5rem;margin:.8rem 0 0;border-top:1px dashed rgba(23,12,8,.2);padding-top:.7rem}
+    .bar-card .row{display:grid;grid-template-columns:58px 1fr;gap:.55rem;font-size:.84rem;line-height:1.32}
+    .bar-card dt{text-transform:uppercase;letter-spacing:.12em;font-size:.64rem;font-weight:950;color:rgba(23,12,8,.48)}
+    .bar-card dd{margin:0;font-weight:750;color:rgba(23,12,8,.82)}
+    .open-card{margin-top:.9rem;width:100%;border:0;border-radius:999px;background:#170c08;color:var(--paper);padding:.78rem;font-weight:950}
+
+    .empty-state{
+      margin-top:1rem;
+      border:1px solid rgba(248,234,209,.14);
+      background:rgba(248,234,209,.06);
+      border-radius:28px;
+      padding:2rem;
+      text-align:center;
+      color:rgba(248,234,209,.72);
+    }
+    .empty-state[hidden]{display:none}
+
+    .rules-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:1rem;
+    }
+    .rule{
+      min-height:240px;
+      border-radius:32px;
+      padding:1rem;
+      border:1px solid rgba(248,234,209,.12);
+      background:rgba(248,234,209,.07);
+      position:relative;
+      overflow:hidden;
+    }
+    .rule::after{content:attr(data-no);position:absolute;right:-.2rem;bottom:-.7rem;font-family:var(--display);font-size:8rem;line-height:.8;color:transparent;-webkit-text-stroke:1px rgba(248,234,209,.16)}
+    .rule h3{font-family:var(--display);font-size:2.8rem;line-height:.82;margin:0 0 .8rem;text-transform:uppercase}
+    .rule p{margin:0;color:rgba(248,234,209,.68);line-height:1.48}
+
+    .faq-list{display:grid;gap:.7rem;max-width:900px;margin-inline:auto}
+    .faq-item{border-radius:24px;background:rgba(248,234,209,.07);border:1px solid rgba(248,234,209,.12);overflow:hidden}
+    .faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;border:0;background:transparent;color:var(--paper);text-align:left;padding:1.1rem 1.2rem;font-weight:950}
+    .faq-q span:last-child{font-family:var(--display);font-size:1.8rem;line-height:1;transition:.18s ease}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .22s ease;color:rgba(248,234,209,.68)}
+    .faq-a p{margin:0;padding:0 1.2rem 1.1rem;line-height:1.55}
+    .faq-item.is-open .faq-a{max-height:220px}
+    .faq-item.is-open .faq-q span:last-child{transform:rotate(45deg)}
+
+    footer{padding:4rem 0 7rem;border-top:1px solid rgba(248,234,209,.12)}
+    .footer-grid{display:grid;grid-template-columns:1fr .7fr;gap:2rem;align-items:start}
+    footer h2{font-family:var(--display);font-size:clamp(4rem,8vw,8rem);line-height:.78;margin:0;text-transform:uppercase}
+    footer p{color:rgba(248,234,209,.64);line-height:1.55;margin:1rem 0 0;max-width:680px}
+    .source-card{border-radius:28px;background:rgba(248,234,209,.07);border:1px solid rgba(248,234,209,.12);padding:1.2rem;color:rgba(248,234,209,.7);line-height:1.55}
+    .source-card strong{display:block;color:var(--paper);margin-bottom:.45rem}
+
+    .drawer{
+      position:fixed;
+      inset:0;
+      z-index:110;
+      pointer-events:none;
+    }
+    .drawer__overlay{position:absolute;inset:0;background:rgba(0,0,0,.56);opacity:0;transition:.22s ease;backdrop-filter:blur(5px)}
+    .drawer__panel{
+      position:absolute;
+      right:14px;
+      top:14px;
+      bottom:14px;
+      width:min(520px, calc(100% - 28px));
+      border-radius:34px;
+      background:var(--paper);
+      color:#170c08;
+      transform:translateX(calc(100% + 32px));
+      transition:.28s cubic-bezier(.2,.8,.2,1);
+      box-shadow:var(--shadow);
+      overflow:auto;
+    }
+    .drawer.is-open{pointer-events:auto}
+    .drawer.is-open .drawer__overlay{opacity:1}
+    .drawer.is-open .drawer__panel{transform:translateX(0)}
+    .drawer__hero{height:190px;background:linear-gradient(135deg,#2b1b13,#7a1e24);position:relative;overflow:hidden}
+    .drawer__hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 32% 34%, rgba(219,164,65,.75) 0 30px, transparent 31px),radial-gradient(circle at 70% 50%, rgba(244,223,189,.5) 0 52px, transparent 53px),repeating-linear-gradient(-12deg, rgba(255,255,255,.08) 0 1px, transparent 1px 14px)}
+    .drawer__hero.has-image{background:#170c08}
+    .drawer__hero.has-image img{width:100%;height:100%;object-fit:cover;filter:saturate(1.04) contrast(1.06)}
+    .drawer__hero.has-image::after{background:linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.58)),repeating-linear-gradient(-12deg, rgba(255,255,255,.08) 0 1px, transparent 1px 14px)}
+    .drawer__hero .photo-credit{z-index:3}
+    .drawer__content{padding:1.25rem}
+    .drawer__close{position:absolute;right:1rem;top:1rem;z-index:2;border:0;background:var(--paper);color:#170c08;border-radius:50%;width:42px;height:42px;font-weight:950}
+    .drawer h3{font-family:var(--display);font-size:4.2rem;line-height:.82;text-transform:uppercase;margin:.3rem 0 .7rem}
+    .drawer .verdict{font-size:1.05rem}
+    .drawer-list{display:grid;gap:.7rem;margin-top:1rem}
+    .drawer-row{padding:.85rem;border-radius:18px;background:rgba(23,12,8,.06)}
+    .drawer-row strong{display:block;text-transform:uppercase;letter-spacing:.12em;font-size:.68rem;color:rgba(23,12,8,.52);margin-bottom:.24rem}
+
+    .palette{
+      display:flex;
+      gap:.4rem;
+      margin-top:1rem;
+    }
+    .swatch{height:34px;flex:1;border-radius:999px;border:1px solid rgba(255,255,255,.18)}
+
+    .command{
+      position:fixed;
+      inset:0;
+      z-index:120;
+      display:none;
+      place-items:start center;
+      padding-top:11vh;
+      background:rgba(0,0,0,.62);
+      backdrop-filter:blur(8px);
+    }
+    .command.is-open{display:grid}
+    .command__box{width:min(720px, calc(100% - 28px));border-radius:30px;background:#f4dfbd;color:#170c08;box-shadow:var(--shadow);overflow:hidden}
+    .command__box input{width:100%;border:0;background:transparent;padding:1.2rem;font-size:1.1rem;font-weight:850;outline:none;border-bottom:1px solid rgba(23,12,8,.12)}
+    .command__results{max-height:420px;overflow:auto;padding:.55rem;display:grid;gap:.35rem}
+    .command__result{border:0;background:rgba(23,12,8,.06);border-radius:18px;padding:.8rem;text-align:left;color:#170c08;font-weight:850}
+    .command__result:hover{background:#170c08;color:var(--paper)}
+
+    .floating-cta{
+      position:fixed;
+      left:50%;bottom:18px;transform:translateX(-50%);
+      z-index:78;
+      display:none;
+      gap:.4rem;
+      padding:.45rem;
+      border-radius:999px;
+      background:rgba(16,9,7,.78);
+      border:1px solid rgba(248,234,209,.14);
+      backdrop-filter:blur(18px);
+      box-shadow:0 18px 55px rgba(0,0,0,.32);
+    }
+    .floating-cta a,.floating-cta button{border:0;border-radius:999px;padding:.72rem .82rem;background:rgba(248,234,209,.09);color:var(--paper);font-weight:950;font-size:.78rem}
+    .floating-cta .main{background:var(--paper);color:#170c08}
+
+    .reveal{opacity:1;transform:none;transition:opacity .55s ease, transform .55s ease}
+    .reveal.is-visible{opacity:1;transform:none}
+
+
+    .route-stop__actions{
+      display:flex;
+      gap:.55rem;
+      flex-wrap:wrap;
+      margin-top:.85rem;
+    }
+    .route-stop__actions a,
+    .route-stop__actions button{
+      border:1px solid rgba(23,12,8,.12);
+      background:rgba(23,12,8,.07);
+      color:#170c08;
+      border-radius:999px;
+      padding:.62rem .78rem;
+      font-size:.76rem;
+      font-weight:950;
+    }
+    .route-stop__actions a:first-child{
+      background:#170c08;
+      color:var(--paper);
+    }
+    .map-shell--routes{
+      grid-template-columns:minmax(0,1.18fr) minmax(320px,.82fr);
+    }
+    .google-map-top--route{
+      align-items:flex-start;
+    }
+    .google-map-top--route div{
+      display:grid;
+      gap:.18rem;
+    }
+    .map-open-current{
+      border-radius:999px;
+      padding:.72rem .9rem;
+      background:var(--paper);
+      color:#170c08;
+      font-size:.78rem;
+      font-weight:950;
+      letter-spacing:0;
+      text-transform:none;
+      white-space:nowrap;
+    }
+    .map-frame-wrap--routes{
+      min-height:390px;
+    }
+    .map-frame-wrap--routes .google-map{
+      min-height:390px;
+    }
+    .maps-route-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:.72rem;
+    }
+    .maps-route-card{
+      border:1px solid rgba(248,234,209,.13);
+      background:rgba(248,234,209,.07);
+      color:rgba(248,234,209,.86);
+      border-radius:24px;
+      padding:.9rem;
+      text-align:left;
+      display:grid;
+      gap:.28rem;
+      transition:.18s ease;
+      min-height:118px;
+    }
+    .maps-route-card span{
+      width:max-content;
+      border-radius:999px;
+      padding:.3rem .48rem;
+      background:rgba(219,164,65,.14);
+      color:var(--gold);
+      font-size:.68rem;
+      font-weight:950;
+      letter-spacing:.1em;
+    }
+    .maps-route-card strong{
+      color:var(--paper);
+      font-family:var(--serif);
+      font-size:1.18rem;
+      line-height:1;
+      letter-spacing:-.05em;
+    }
+    .maps-route-card small{
+      color:rgba(248,234,209,.56);
+      line-height:1.35;
+      font-weight:750;
+    }
+    .maps-route-card:hover,
+    .maps-route-card.is-active{
+      transform:translateY(-2px);
+      background:var(--paper);
+      color:#170c08;
+      border-color:var(--paper);
+    }
+    .maps-route-card:hover strong,
+    .maps-route-card.is-active strong{color:#170c08}
+    .maps-route-card:hover small,
+    .maps-route-card.is-active small{color:rgba(23,12,8,.62)}
+    .maps-route-card:hover span,
+    .maps-route-card.is-active span{background:rgba(118,30,36,.12);color:var(--wine)}
+    .map-tool-row{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:.55rem;
+    }
+    .map-pin-row--compact{
+      border-top:1px solid rgba(248,234,209,.1);
+      padding-top:.72rem;
+    }
+    .map-panel--routes{
+      background:linear-gradient(155deg, #f4dfbd, #fff2d2);
+      position:sticky;
+      top:98px;
+      align-self:start;
+    }
+    .map-panel__label{
+      display:inline-flex;
+      border-radius:999px;
+      padding:.4rem .58rem;
+      background:rgba(118,30,36,.1);
+      color:var(--wine);
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-weight:950;
+      font-size:.68rem;
+      margin-bottom:.7rem;
+    }
+    .route-actions-list{
+      display:grid;
+      gap:.62rem;
+      position:relative;
+      z-index:2;
+    }
+    .route-actions-list a{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:1rem;
+      border-radius:20px;
+      padding:.9rem .95rem;
+      background:rgba(23,12,8,.07);
+      border:1px solid rgba(23,12,8,.11);
+      color:#170c08;
+      transition:.18s ease;
+    }
+    .route-actions-list a strong{
+      font-size:.94rem;
+      line-height:1.1;
+    }
+    .route-actions-list a span{
+      color:rgba(23,12,8,.58);
+      font-size:.75rem;
+      font-weight:850;
+      text-align:right;
+    }
+    .route-actions-list a:hover{
+      background:#170c08;
+      color:var(--paper);
+    }
+    .route-actions-list a:hover span{color:rgba(248,234,209,.62)}
+
+
+    .route-launcher{
+      padding:1.15rem;
+    }
+    .route-launcher::after{display:none}
+    .route-launcher h3{
+      font-family:var(--serif);
+      font-size:clamp(1.55rem,2.5vw,2.25rem);
+      line-height:1;
+      letter-spacing:-.06em;
+      margin:.1rem 0 .75rem;
+      text-transform:none;
+    }
+    .route-launcher p{
+      margin:0 0 .9rem;
+      color:rgba(23,12,8,.66);
+      line-height:1.45;
+      font-size:.98rem;
+    }
+    .route-primary-actions{
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:.55rem;
+      margin:1rem 0;
+    }
+    .route-open-main,
+    .route-copy{
+      border:0;
+      border-radius:999px;
+      padding:.88rem 1rem;
+      font-weight:950;
+      text-align:center;
+    }
+    .route-open-main{
+      background:#170c08;
+      color:var(--paper);
+    }
+    .route-copy{
+      background:rgba(23,12,8,.08);
+      color:#170c08;
+      border:1px solid rgba(23,12,8,.12);
+    }
+    .route-mini-list{
+      margin:0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:.45rem;
+      counter-reset:miniRoute;
+    }
+    .route-mini-list li{
+      counter-increment:miniRoute;
+      display:flex;
+      align-items:center;
+      gap:.55rem;
+      padding:.6rem .65rem;
+      border-radius:16px;
+      background:rgba(23,12,8,.06);
+      color:#170c08;
+      font-size:.9rem;
+      font-weight:850;
+    }
+    .route-mini-list li::before{
+      content:counter(miniRoute, decimal-leading-zero);
+      width:2.1rem;
+      color:var(--wine);
+      font-family:var(--display);
+      font-size:1.55rem;
+      line-height:.8;
+    }
+    .route-map-note{
+      margin:.9rem 0 0!important;
+      padding-top:.85rem;
+      border-top:1px dashed rgba(23,12,8,.18);
+      font-size:.8rem!important;
+      color:rgba(23,12,8,.52)!important;
+    }
+
+    @media (max-width: 1040px){
+      .hero__grid,.route-layout,.map-shell,.section-head,.footer-grid{grid-template-columns:1fr}
+      .visual-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:220px}
+      .visual-shot:nth-child(n){grid-column:auto;grid-row:auto}
+      .visual-shot:nth-child(1){grid-column:span 2;grid-row:span 2}
+      .hero__panel{min-height:auto}.poster{min-height:520px}.route-sticky{position:relative;top:auto;min-height:360px}.route-sticky .btn{position:relative;left:auto;right:auto;bottom:auto;margin-top:1.4rem;width:100%}
+      .bars-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .tapas-bento{grid-template-columns:1fr 1fr}.tapa-card:nth-child(1){grid-row:auto;grid-column:span 2}
+      .rules-grid{grid-template-columns:repeat(2,1fr)}
+    }
+
+    @media (max-width: 760px){
+      .cursor-glow{display:none}
+      #visuales .section-head p{max-width:34ch}
+      .visual-grid{display:grid;grid-auto-flow:column;grid-auto-columns:84%;grid-template-columns:none;grid-auto-rows:auto;overflow-x:auto;gap:.85rem;padding-bottom:.25rem;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none}
+      .visual-grid::-webkit-scrollbar{display:none}
+      .visual-shot{min-height:360px;scroll-snap-align:start}
+      .visual-shot:nth-child(n){grid-column:auto;grid-row:auto}
+      .visual-shot__bar{left:.8rem;right:.8rem;bottom:.8rem;padding:.9rem .95rem}
+      .visual-shot__bar strong{font-size:1.28rem}
+      .visual-shot__bar span{font-size:.72rem}
+      .visual-note{font-size:.88rem;padding:.9rem 1rem}
+      .topbar{top:8px;width:calc(100% - 16px);border-radius:24px}
+      .topbar__inner{padding:.48rem .5rem .48rem .75rem}
+      .nav{position:absolute;left:0;right:0;top:calc(100% + 8px);display:none;flex-direction:column;align-items:stretch;background:rgba(16,9,7,.96);border:1px solid rgba(248,234,209,.12);border-radius:24px;padding:.5rem;box-shadow:var(--shadow)}
+      .nav.is-open{display:flex}
+      .nav a,.nav button{text-align:left;width:100%}
+      .mobile-toggle{display:grid;width:42px;height:42px;place-items:center;border:0;border-radius:50%;background:var(--paper);color:#170c08;font-weight:950}
+      .hero{padding-top:7rem;min-height:auto}
+      .hero h1{font-size:clamp(5rem,23vw,8rem)}
+      .hero__lead{font-size:1.12rem}
+      .poster{width:100%;min-height:500px;transform:none;border-radius:30px}
+      .dish-3d{width:260px;height:260px}
+      .poster__title{font-size:4rem}.poster__stamp{width:78px;height:78px;font-size:1.1rem}
+      .street-mode,.search-row{grid-template-columns:1fr}
+      .street-card{min-height:220px}.street-card h3{font-size:3.1rem}
+      .route-stop{grid-template-columns:74px 1fr;align-items:start;padding:.85rem}.route-stop__media{grid-column:1 / -1;grid-row:1;height:178px;border-radius:22px}.route-stop__no{grid-column:1;grid-row:2;font-size:4.3rem}.route-stop__content{grid-column:2;grid-row:2}.walk-pill{grid-column:2;grid-row:3;width:max-content}.route-stop h4{font-size:1.35rem}.route-stop__ask{font-size:.9rem}
+      .map-board{min-height:auto;border-radius:30px;padding:.75rem}.map-frame-wrap{min-height:360px;border-radius:24px}.google-map{min-height:360px}.map-control-strip{grid-template-columns:1fr 1fr}.map-zone-button,.map-pin-button{font-size:.82rem;padding:.62rem}.map-pin-row{margin-inline:-.1rem}
+      .map-shell--routes{grid-template-columns:1fr}.google-map-top--route{display:grid;gap:.65rem}.map-open-current{width:100%;text-align:center}.maps-route-grid{display:grid;grid-auto-flow:column;grid-auto-columns:82%;grid-template-columns:none;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.2rem;scrollbar-width:none}.maps-route-grid::-webkit-scrollbar{display:none}.maps-route-card{scroll-snap-align:start;min-height:132px}.map-tool-row{display:grid;grid-auto-flow:column;grid-auto-columns:42%;grid-template-columns:none;overflow-x:auto;scrollbar-width:none}.map-tool-row::-webkit-scrollbar{display:none}.map-panel--routes{position:relative;top:auto}.route-primary-actions{grid-template-columns:1fr}.route-mini-list li{font-size:.86rem}.route-launcher{order:-1}
+      .tapas-bento,.bars-grid,.rules-grid{grid-template-columns:1fr}.tapa-card:nth-child(1){grid-column:auto}.tapa-card{min-height:250px}
+      .bars-section{padding-bottom:8rem}
+      .toolbox{margin-bottom:1.2rem}
+      .bars-grid{gap:1.05rem;min-height:0}
+      .bar-card{min-height:auto}
+      .empty-state{margin-top:1rem}
+      .chip-label{width:100%;min-width:0}.chip-row{gap:.36rem}.chip{font-size:.74rem;padding:.52rem .66rem}
+      section{padding:4.4rem 0}.section-head h2{font-size:clamp(4.5rem,20vw,7rem)}
+      .floating-cta{display:flex}.footer-grid{padding-bottom:2rem}
+    }
+
+    @media print{
+      body{background:#fff;color:#000}.topbar,.progress,.cursor-glow,.floating-cta,.command,.drawer,.hero__actions,.toolbox,.marquee{display:none!important}
+      body::before,body::after,.hero::before{display:none}.hero{min-height:auto;padding:1rem 0}.container{width:100%}section{padding:1.2rem 0;page-break-inside:avoid}.bar-card,.route-stop,.tapa-card,.map-panel,.street-card,.rule{box-shadow:none;border:1px solid #ddd}.map-board{display:none}.bars-grid{grid-template-columns:repeat(2,1fr)}
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="progress" data-progress></div>
+  <div class="cursor-glow" data-cursor></div>
+
+  <header class="topbar" aria-label="Cabecera principal">
+    <div class="topbar__inner">
+      <a class="brand" href="#inicio" aria-label="Volver al inicio">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">Zamora de barra en barra</span>
+      </a>
+
+      <button class="mobile-toggle" data-menu-toggle aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+      <nav class="nav" data-nav aria-label="Navegación principal">
+        <a data-section-link href="#ruta">Ruta</a>
+        <a data-section-link href="#mapa">Mapa</a>
+        <a data-section-link href="#bares">Bares</a>
+        <button type="button" data-open-command title="Abrir buscador rápido">Ctrl K</button>
+        <button class="nav__primary" type="button" data-share>Compartir</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero" aria-label="Portada de la guía">
+      <div class="container hero__grid">
+        <div class="hero__copy" data-parallax="-.06">
+          <span class="kicker">Guía de tapeo · Zamora capital</span>
+          <h1>
+            <span>Zamora</span>
+            <span class="stroke">de barra</span>
+            <span>en barra</span>
+          </h1>
+          <p class="hero__lead">
+            Una guía rápida para saber dónde empezar, qué pedir y cómo moverte por las zonas de tapeo más conocidas de Zamora.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--main" href="#ruta">Ver ruta recomendada</a>
+            <a class="btn btn--ghost" href="#bares">Explorar bares</a>
+          </div>
+        </div>
+
+        <aside class="hero__panel" data-parallax=".08" aria-label="Resumen visual de la ruta">
+          <div class="poster" data-tilt>
+            <div class="poster__top">
+              <div class="poster__stamp">RUTA<br>LOCAL</div>
+              <div class="poster__meta">Viernes noche<br>Zamora capital</div>
+            </div>
+
+            <figure class="hero-photo" data-tilt>
+              <img src="https://emulsiongourmet.es/wp-content/uploads/2018/08/pincho_moruno_el_lobo.jpg" alt="Pincho moruno en Bar El Lobo de Zamora" decoding="async" referrerpolicy="no-referrer">
+              <figcaption>
+                <strong>Bar El Lobo</strong>
+                <span>Una parada clásica para empezar por Los Lobos.</span>
+              </figcaption>
+            </figure>
+
+            <h2 class="poster__title">Ruta fácil.<small>Sin perderte entre bares.</small></h2>
+
+            <div class="poster__bottom">
+              <div><strong>6</strong><span>paradas</span></div>
+              <div><strong>18</strong><span>sitios</span></div>
+              <div><strong>Maps</strong><span>ruta andando</span></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>FIGÓN</span><span>TIBERIOS</span><span>PINCHO MORUNO</span><span>TORTILLA CON CALLOS</span><span>CHORIZO A LA BRASA</span><span>MOLLEJAS</span>
+        <span>FIGÓN</span><span>TIBERIOS</span><span>PINCHO MORUNO</span><span>TORTILLA CON CALLOS</span><span>CHORIZO A LA BRASA</span><span>MOLLEJAS</span>
+      </div>
+    </div>
+
+    <section id="ruta">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="kicker">Ruta recomendada</span>
+            <h2>Haz esta ruta.</h2>
+          </div>
+          <p>Seis paradas ordenadas para una primera noche: qué pedir, dónde ir y botón directo a Maps.</p>
+        </div>
+
+        <div class="route-layout">
+          <aside class="route-sticky reveal">
+            <span class="kicker">Primera vez</span>
+            <h3>La ruta más fácil para empezar.</h3>
+            <p>Pincho moruno, figón, tiberios, tortilla con callos y cierre más tranquilo.</p>
+            <a class="btn btn--main" href="#mapa">Abrir ruta en Maps</a>
+          </aside>
+
+          <div class="route-list reveal" id="routeList"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="mapa">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="kicker">Mapa práctico</span>
+            <h2>Abre la ruta en Google Maps.</h2>
+          </div>
+          <p>Elige una ruta y ábrela directamente en Google Maps con las paradas ya ordenadas.</p>
+        </div>
+
+        <div class="map-shell map-shell--routes reveal">
+          <div class="map-board map-board--google" aria-label="Mapa real de Google Maps con rutas de tapeo de Zamora">
+            <div class="google-map-top google-map-top--route">
+              <div>
+                <span>Google Maps integrado</span>
+                <strong data-route-map-title>Ruta esencial · 6 paradas</strong>
+              </div>
+              <a class="map-open-current" data-current-route-link target="_blank" rel="noopener">Abrir en Maps ↗</a>
+            </div>
+
+            <div class="map-frame-wrap map-frame-wrap--routes">
+              <iframe
+                class="google-map"
+                data-google-map
+                title="Mapa de ruta de tapeo por Zamora en Google Maps"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://maps.google.com/maps?f=d&source=s_d&saddr=Bar%20El%20Lobo%2C%20Zamora&daddr=Portillo%20de%20la%20Traici%C3%B3n%2C%20Zamora&dirflg=w&output=embed">
+              </iframe>
+            </div>
+
+            <div class="maps-route-grid" aria-label="Elegir ruta en Google Maps">
+              <button class="maps-route-card is-active" data-route-map="essential">
+                <span>01</span>
+                <strong>Ruta esencial</strong>
+                <small>Primera vez · clásicos · 35-45 min aprox.</small>
+              </button>
+              <button class="maps-route-card" data-route-map="lobos">
+                <span>02</span>
+                <strong>Solo Los Lobos</strong>
+                <small>Plan corto · todo cerca · sin salir de la zona</small>
+              </button>
+              <button class="maps-route-card" data-route-map="herreros">
+                <span>03</span>
+                <strong>Los Lobos + Herreros</strong>
+                <small>Más ambiente · brasa · segunda ronda</small>
+              </button>
+              <button class="maps-route-card" data-route-map="tranquila">
+                <span>04</span>
+                <strong>Sentarse y cenar</strong>
+                <small>Menos barra · más mesa · cena tranquila</small>
+              </button>
+            </div>
+
+            <div class="map-tool-row" aria-label="Buscar zonas o bares concretos en el mapa">
+              <button class="map-zone-button" data-map-zone="lobos" data-zone="lobos" data-map-query="Los Lobos Zamora" data-map-zoom="16">Los Lobos<small>zona clásica</small></button>
+              <button class="map-zone-button" data-map-zone="herreros" data-zone="herreros" data-map-query="Calle de los Herreros Zamora" data-map-zoom="16">Herreros<small>segunda ronda</small></button>
+              <button class="map-zone-button" data-map-zone="centro" data-zone="centro" data-map-query="Plaza Mayor Zamora" data-map-zoom="15">Centro<small>vino y mesa</small></button>
+              <button class="map-zone-button" data-map-zone="marina" data-zone="marina" data-map-query="Plaza de la Marina Española Zamora" data-map-zoom="16">La Marina<small>raciones</small></button>
+            </div>
+
+            <div class="map-pin-row map-pin-row--compact" aria-label="Abrir bares principales en el mapa">
+              <button class="map-pin-button" data-pin="1" data-id="1"><strong>01</strong> El Lobo<small>pincho moruno</small></button>
+              <button class="map-pin-button" data-pin="2" data-id="2"><strong>02</strong> Caballero<small>figón</small></button>
+              <button class="map-pin-button" data-pin="3" data-id="3"><strong>03</strong> Pinchitos<small>pincho moruno</small></button>
+              <button class="map-pin-button" data-pin="4" data-id="4"><strong>04</strong> Bambú<small>tiberios</small></button>
+              <button class="map-pin-button" data-pin="5" data-id="5"><strong>05</strong> Chillón<small>tortilla</small></button>
+              <button class="map-pin-button" data-pin="6" data-id="6"><strong>06</strong> Portillo<small>gastro</small></button>
+            </div>
+          </div>
+
+          <aside class="map-panel map-panel--routes route-launcher">
+            <span class="map-panel__label">Ruta activa</span>
+            <h3 data-route-panel-title>Ruta esencial</h3>
+            <p data-route-panel-copy>Para una primera noche en Zamora: Los Lobos, una parada diferente y cierre más tranquilo.</p>
+
+            <div class="route-primary-actions">
+              <a class="route-open-main" data-current-route-link target="_blank" rel="noopener">Abrir navegación andando</a>
+            </div>
+
+            <ol class="route-mini-list" data-route-panel-stops>
+              <li>Bar El Lobo</li>
+              <li>Bar Caballero</li>
+              <li>Casa de los Pinchitos</li>
+              <li>Bar Bambú</li>
+              <li>Bar Chillón</li>
+              <li>Portillo de la Traición</li>
+            </ol>
+
+            <p class="route-map-note">Útil en la calle: abre la ruta, camina y ve parando en orden.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="bares" class="bars-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="kicker">Bares seleccionados</span>
+            <h2>Más sitios si quieres cambiar el plan.</h2>
+          </div>
+          <p>Si quieres salirte de la ruta, busca por zona, tapa o tipo de plan.</p>
+        </div>
+
+        <div class="toolbox reveal" aria-label="Filtros de bares">
+          <div class="search-row">
+            <input class="search" data-search type="search" placeholder="Buscar por bar, tapa, zona o plan…" autocomplete="off" />
+            <div class="counter"><span data-results-count>18</span>&nbsp;sitios</div>
+            <button class="btn" type="button" data-clear-filters>Limpiar</button>
+          </div>
+
+          <div class="chip-groups">
+            <div class="chip-row" data-chip-row="zone">
+              <span class="chip-label">Zona</span>
+              <button class="chip is-active" data-filter-group="zone" data-filter-value="all">Todos</button>
+              <button class="chip" data-filter-group="zone" data-filter-value="lobos">Los Lobos</button>
+              <button class="chip" data-filter-group="zone" data-filter-value="herreros">Herreros</button>
+              <button class="chip" data-filter-group="zone" data-filter-value="centro">Centro</button>
+              <button class="chip" data-filter-group="zone" data-filter-value="santa">Santa Clara</button>
+              <button class="chip" data-filter-group="zone" data-filter-value="marina">La Marina</button>
+            </div>
+
+            <div class="chip-row" data-chip-row="type">
+              <span class="chip-label">Plan</span>
+              <button class="chip is-active" data-filter-group="type" data-filter-value="all">Todos</button>
+              <button class="chip" data-filter-group="type" data-filter-value="imprescindible">Imprescindible</button>
+              <button class="chip" data-filter-group="type" data-filter-value="clasico">Clásico</button>
+              
+              <button class="chip" data-filter-group="type" data-filter-value="sentarse">Para sentarse</button>
+              <button class="chip" data-filter-group="type" data-filter-value="gastro">Gastro</button>
+              
+            </div>
+
+            <div class="chip-row" data-chip-row="dish">
+              <span class="chip-label">Tapa</span>
+              <button class="chip is-active" data-filter-group="dish" data-filter-value="all">Todas</button>
+              <button class="chip" data-filter-group="dish" data-filter-value="figon">Figón</button>
+              <button class="chip" data-filter-group="dish" data-filter-value="pincho">Pincho</button>
+              <button class="chip" data-filter-group="dish" data-filter-value="tiberios">Tiberios</button>
+              <button class="chip" data-filter-group="dish" data-filter-value="tortilla">Tortilla</button>
+              <button class="chip" data-filter-group="dish" data-filter-value="brasa">Brasa</button>
+              <button class="chip" data-filter-group="dish" data-filter-value="raciones">Raciones</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bars-grid reveal" id="barsGrid" aria-live="polite">
+          <article class="bar-card" data-id="1" data-zone="lobos" data-type="imprescindible clasico barato" data-dish="pincho" data-price="€" data-tilt>
+            <div class="bar-card__art has-image"><img src="https://emulsiongourmet.es/wp-content/uploads/2018/08/pincho_moruno_el_lobo.jpg" alt="Pincho moruno del Bar El Lobo en Zamora" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="photo-credit">Bar El Lobo</span></div>
+            <div class="bar-card__body">
+              <div class="bar-card__top">
+                <div class="bar-card__no">01</div>
+                <button class="fav" type="button" data-fav="1" aria-label="Guardar favorito">☆</button>
+              </div>
+              <h3>Bar El Lobo</h3>
+              <p class="verdict">El sitio clásico para empezar por Los Lobos con un pincho moruno.</p>
+              <div class="meta-line">
+                <span class="tag">Los Lobos</span>
+                <span class="tag">€</span>
+                <span class="tag">imprescindible</span><span class="tag">clasico</span>
+              </div>
+              <dl>
+                <div class="row"><dt>Pide</dt><dd>Pincho moruno. Con picante: “que sí”. Sin picante: “que no”.</dd></div>
+                <div class="row"><dt>Plan</dt><dd>Primera parada de la ruta.</dd></div>
+              </dl>
+              <button class="open-card" type="button" data-open-bar="1">Abrir ficha</button>
+            </div>
+          </article>
+          <article class="bar-card" data-id="2" data-zone="lobos" data-type="imprescindible clasico barato" data-dish="figon tortilla raciones" data-price="€" data-tilt>
+            <div class="bar-card__art has-image"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/ab/2b/0c/figon.jpg?h=1200&s=1&w=1200" onerror="this.onerror=null;this.src='https://www.barcaballero.com/resources/cache/7/a/4/e2f9ff178b7d7fb4eb8ae649fd1c6d66-7a480ec8383986e3e110000cc7c59023.webp';" alt="Figón de Bar Caballero en Zamora" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="photo-credit">Bar Caballero</span></div>
+            <div class="bar-card__body">
+              <div class="bar-card__top">
+                <div class="bar-card__no">02</div>
+                <button class="fav" type="button" data-fav="2" aria-label="Guardar favorito">☆</button>
+              </div>
+              <h3>Bar Caballero</h3>
+              <p class="verdict">Pide figón. Es la parada más clara para entender la ruta.</p>
+              <div class="meta-line">
+                <span class="tag">Los Lobos</span>
+                <span class="tag">€</span>
+                <span class="tag">imprescindible</span><span class="tag">clasico</span>
+              </div>
+              <dl>
+                <div class="row"><dt>Pide</dt><dd>Figón, patatas mixtas, crestas y callos.</dd></div>
+                <div class="row"><dt>Plan</dt><dd>Parada fácil para probar figón.</dd></div>
+              </dl>
+              <button class="open-card" type="button" data-open-bar="2">Abrir ficha</button>
+            </div>
+          </article>
+          <article class="bar-card" data-id="3" data-zone="lobos" data-type="clasico barato" data-dish="pincho" data-price="€" data-tilt>
+            <div class="bar-card__art has-image"><img src="https://img02.restaurantguru.com/c5b9-La-Casa-de-Los-Pinchitos-Zamora-dishes.jpg" alt="Pinchos y barra en La Casa de Los Pinchitos de Zamora" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="photo-credit">Casa de los Pinchitos</span></div>
+            <div class="bar-card__body">
+              <div class="bar-card__top">
+                <div class="bar-card__no">03</div>
+                <button class="fav" type="button" data-fav="3" aria-label="Guardar favorito">☆</button>
+              </div>
+              <h3>Casa de los Pinchitos</h3>
+              <p class="verdict">Buena para seguir con pinchos sin salir de la zona.</p>
+              <div class="meta-line">
+                <span class="tag">Los Lobos</span>
+                <span class="tag">€</span>
+                <span class="tag">clasico</span><span class="tag">barato</span>
+              </div>
+              <dl>
+                <div class="row"><dt>Pide</dt><dd>Pinchos morunos de carne o chorizo.</dd></div>
+                <div class="row"><dt>Plan</dt><dd>Otra parada rápida dentro de Los Lobos.</dd></div>
+              </dl>
+              <button class="open-card" type="button" data-open-bar="3">Abrir ficha</button>
+            </div>
+          </article>
+          <article class="bar-card" data-id="4" data-zone="lobos" data-type="imprescindible clasico" data-dish="tiberios raciones" data-price="€" data-tilt>
+            <div class="bar-card__art has-image"><img src="https://imagenes.elpais.com/resizer/v2/MXBHD2S5WNDFHJCVH32JWXMPFE.jpg?auth=030d99f8abf8c24b84adf490c46856945fb6d4f8b82f02b502105231d7be60f2&amp;width=828" alt="Tiberios del Bar Bambú en Zamora" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="photo-credit">Bar Bambú</span></div>
+            <div class="bar-card__body">
+              <div class="bar-card__top">
+                <div class="bar-card__no">04</div>
+                <button class="fav" type="button" data-fav="4" aria-label="Guardar favorito">☆</button>
+              </div>
+              <h3>Bar Bambú</h3>
+              <p class="verdict">Los tiberios son una de las tapas más reconocibles de Zamora.</p>
+              <div class="meta-line">
+                <span class="tag">Los Lobos</span>
+                <span class="tag">€</span>
+                <span class="tag">imprescindible</span><span class="tag">clasico</span>
+              </div>
+              <dl>
+                <div class="row"><dt>Pide</dt><dd>Tiberios y perdices.</dd></div>
+                <div class="row"><dt>Plan</dt><dd>Parada imprescindible si quieres probar una tapa muy local.</dd></div>
+              </dl>
+              <button class="open-card" type="button" data-open-bar="4">Abrir ficha</button>
+            </div>
+          </article>
+          <article class="bar-card" data-id="5" data-zone="santa" data-type="imprescindible clasico barato" data-dish="tortilla" data-price="€" data-tilt>
+            <div class="bar-card__art has-image"><img src="https://s1.elespanol.com/2024/03/26/castilla-y-leon/region/zamora/842925837_241034392_1706x1925.jpg" alt="Tortilla con salsa de callos del Bar Chillón en Zamora" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="photo-credit">Bar Chillón</span></div>
+            <div class="bar-card__body">
+              <div class="bar-card__top">
+                <div class="bar-card__no">05</div>
+                <button class="fav" type="button" data-fav="5" aria-label="Guardar favorito">☆</button>
+              </div>
+              <h3>Bar Chillón</h3>
+              <p class="verdict">Tortilla con una salsa muy reconocible. Es de esas tapas que se recuerdan.</p>
+              <div class="meta-line">
+                <span class="tag">Santa Clara</span>
+                <span class="tag">€</span>
+                <span class="tag">imprescindible</span><span class="tag">clasico</span>
+              </div>
+              <dl>
+                <div class="row"><dt>Pide</dt><dd>Tortilla con salsa de callos.</dd></div>
+                <div class="row"><dt>Plan</dt><dd>Parada diferente fuera de Los Lobos.</dd></div>
+              </dl>
+              <button class="open-card" type="button" data-open-bar="5">Abrir ficha</button>
+            </div>
+          </article>
+          <article class="bar-card" data-id="6" data-zone="centro" data-type="gastro sentarse" data-dish="raciones" data-price="€€" data-tilt>
+            <div class="bar-card__art has-image"><img src="https://img02.restaurantguru.com/c07d-Pub-and-bar-Portillo-de-la-Traicion-food.jpg" alt="Tapas creativas de Portillo de la Traición en Zamora" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="photo-credit">Portillo de la Traición</span></div>
+            <div class="bar-card__body">
+              <div class="bar-card__top">
+                <div class="bar-card__no">06</div>
+                <button class="fav" type="button" data-fav="6" aria-label="Guardar favorito">☆</button>
+              </div>
+              <h3>Portillo de la Traición</h3>
+              <p class="verdict">Buen cierre si quieres algo más trabajado sin cambiar demasiado de zona.</p>
+              <div class="meta-line">
+                <span class="tag">Centro</span>
+                <span class="tag">€€</span>
+                <span class="tag">gastro</span><span class="tag">sentarse</span>
+              </div>
+              <dl>
+                <div class="row"><dt>Pide</dt><dd>Gildas, croquetas, oreja y tapas creativas.</dd></div>
+                <div class="row"><dt>Plan</dt><dd>Cierre más elaborado después de los clásicos.</dd></div>
+              </dl>
+              <button class="open-card" type="button" data-open-bar="6">Abrir ficha</button>
+            </div>
+          </article>
+          <article class="bar-card" data-id="7" data-zone="centro" data-type="sentarse clasico" data-dish="raciones" data-price="€" data-tilt>
+            <div class="bar-card__art has-image"><img src="https://images.mnstatic.com/03/e2/03e2d5e1917c3e47cebdc127ac911347.jpg" alt="Interior de La Vinacoteca en Zamora con vinos" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="photo-credit">La Vinacoteca</span></div>
+            <div class="bar-card__body">
+              <div class="bar-card__top">
+                <div class="bar-card__no">07</div>
+                <button class="fav" type="button" data-fav="7" aria-label="Guardar favorito">☆</button>
+              </div>
+              <h3>La Vinacoteca</h3>
+              <p class="verdict">Buena opción si quieres bajar el ritmo con vino, queso o embutido.</p>
+              <div class="meta-line">
+                <span class="tag">Centro</span>
+                <span class="tag">€</span>
+                <span class="tag">sentarse</span><span class="tag">clasico</span>
+              </div>
+              <dl>
+                <div class="row"><dt>Pide</dt><dd>Vino, queso, cecina, embutidos y tostas.</dd></div>
+                <div class="row"><dt>Plan</dt><dd>Aperitivo tranquilo con vino y producto frío.</dd></div>
+              </dl>
+              <button class="open-card" type="button" data-open-bar="7">Abrir ficha</button>
+            </div>
+          </article>
+          <article class="bar-card" data-id="8" data-zone="herreros" data-type="clasico barato" data-dish="brasa pincho" data-price="€" data-tilt>
+            <div class="bar-card__art has-image"><img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Bar_Bodega_Chori_03.jpg" alt="Chorizo zamorano en Bar Bodega Chori" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="photo-credit">Bodega Chori</span></div>
+            <div class="bar-card__body">
+              <div class="bar-card__top">
+                <div class="bar-card__no">08</div>
+                <button class="fav" type="button" data-fav="8" aria-label="Guardar favorito">☆</button>
+              </div>
+              <h3>Bodega Chori</h3>
+              <p class="verdict">Parada directa para chorizo a la brasa y algo rápido.</p>
+              <div class="meta-line">
+                <span class="tag">Herreros</span>
+                <span class="tag">€</span>
+                <span class="tag">clasico</span><span class="tag">barato</span>
+              </div>
+              <dl>
+                <div class="row"><dt>Pide</dt><dd>Chorizo a la brasa, morcilla y pinchos.</dd></div>
+                <div class="row"><dt>Plan</dt><dd>Brasa sencilla en la zona de Herreros.</dd></div>
+              </dl>
+              <button class="open-card" type="button" data-open-bar="8">Abrir ficha</button>
+            </div>
+          </article>
+          <article class="bar-card" data-id="9" data-zone="herreros" data-type="clasico barato" data-dish="raciones" data-price="€" data-tilt>
+            <div class="bar-card__art has-image"><img src="https://www.bayadoliz.es/wp-content/uploads/2025/10/meson-bayadoliz-en-zamora.jpg" alt="Fachada de Mesón Bayadoliz en Zamora" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="photo-credit">Mesón Bayadoliz</span></div>
+            <div class="bar-card__body">
+              <div class="bar-card__top">
+                <div class="bar-card__no">09</div>
+                <button class="fav" type="button" data-fav="9" aria-label="Guardar favorito">☆</button>
+              </div>
+              <h3>Mesón Bayadoliz</h3>
+              <p class="verdict">Opción clásica para raciones y ambiente de calle Herreros.</p>
+              <div class="meta-line">
+                <span class="tag">Herreros</span>
+                <span class="tag">€</span>
+                <span class="tag">clasico</span><span class="tag">barato</span>
+              </div>
+              <dl>
+                <div class="row"><dt>Pide</dt><dd>Oreja, champiñones, cachuelas, alitas y montados.</dd></div>
+                <div class="row"><dt>Plan</dt><dd>Segunda ronda por Herreros.</dd></div>
+              </dl>
+              <button class="open-card" type="button" data-open-bar="9">Abrir ficha</button>
+            </div>
+          </article>
+          <article class="bar-card" data-id="10" data-zone="herreros" data-type="clasico sentarse" data-dish="raciones brasa" data-price="€€" data-tilt>
+            <div class="bar-card__art has-image"><img src="https://hosteleriaenzamora.com/wp-content/uploads/2019/02/IMG-20190227-WA0108-1024x683.jpg" alt="Tapa a la plancha en Bar Los Abuelos I de Zamora" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="photo-credit">Los Abuelos I</span></div>
+            <div class="bar-card__body">
+              <div class="bar-card__top">
+                <div class="bar-card__no">10</div>
+                <button class="fav" type="button" data-fav="10" aria-label="Guardar favorito">☆</button>
+              </div>
+              <h3>Los Abuelos I</h3>
+              <p class="verdict">Para tapas de plancha y raciones en una zona muy de tapeo.</p>
+              <div class="meta-line">
+                <span class="tag">Herreros</span>
+                <span class="tag">€€</span>
+                <span class="tag">clasico</span><span class="tag">sentarse</span>
+              </div>
+              <dl>
+                <div class="row"><dt>Pide</dt><dd>Mollejas, champis, pinchos, oreja y sepia.</dd></div>
+                <div class="row"><dt>Plan</dt><dd>Plancha tradicional.</dd></div>
+              </dl>
+              <button class="open-card" type="button" data-open-bar="10">Abrir ficha</button>
+            </div>
+          </article>
+          <article class="bar-card" data-id="11" data-zone="herreros" data-type="sentarse clasico" data-dish="raciones" data-price="€€" data-tilt>
+            <div class="bar-card__art has-image"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Bar_La_Herreria_01.jpg" alt="Interior de Bar La Herrería en Zamora" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="photo-credit">La Herrería</span></div>
+            <div class="bar-card__body">
+              <div class="bar-card__top">
+                <div class="bar-card__no">11</div>
+                <button class="fav" type="button" data-fav="11" aria-label="Guardar favorito">☆</button>
+              </div>
+              <h3>La Herrería</h3>
+              <p class="verdict">Mejor para sentarse que para una ruta rápida de barra.</p>
+              <div class="meta-line">
+                <span class="tag">Herreros</span>
+                <span class="tag">€€</span>
+                <span class="tag">sentarse</span><span class="tag">clasico</span>
+              </div>
+              <dl>
+                <div class="row"><dt>Pide</dt><dd>Arroz a la zamorana y bacalao con pisto.</dd></div>
+                <div class="row"><dt>Plan</dt><dd>Para comer algo más de plato.</dd></div>
+              </dl>
+              <button class="open-card" type="button" data-open-bar="11">Abrir ficha</button>
+            </div>
+          </article>
+          <article class="bar-card" data-id="12" data-zone="centro" data-type="sentarse gastro" data-dish="raciones" data-price="€€€" data-tilt>
+            <div class="bar-card__art has-image"><img src="https://img02.restaurantguru.com/c641-Pub-and-bar-Los-Caprichos-De-Meneses-food.jpg" alt="Platos y tapas de Los Caprichos de Meneses en Zamora" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="photo-credit">Los Caprichos de Meneses</span></div>
+            <div class="bar-card__body">
+              <div class="bar-card__top">
+                <div class="bar-card__no">12</div>
+                <button class="fav" type="button" data-fav="12" aria-label="Guardar favorito">☆</button>
+              </div>
+              <h3>Los Caprichos de Meneses</h3>
+              <p class="verdict">Para sentarte y cenar mejor, no para hacer una parada rápida.</p>
+              <div class="meta-line">
+                <span class="tag">Centro</span>
+                <span class="tag">€€€</span>
+                <span class="tag">sentarse</span><span class="tag">gastro</span>
+              </div>
+              <dl>
+                <div class="row"><dt>Pide</dt><dd>Bacalaos, foie, tapas elaboradas y vino.</dd></div>
+                <div class="row"><dt>Plan</dt><dd>Cena tranquila cerca de Plaza Mayor.</dd></div>
+              </dl>
+              <button class="open-card" type="button" data-open-bar="12">Abrir ficha</button>
+            </div>
+          </article>
+          <article class="bar-card" data-id="13" data-zone="centro" data-type="sentarse gastro" data-dish="raciones" data-price="€€" data-tilt>
+            <div class="bar-card__art has-image"><img src="https://restauranteagapezamora.com/wp-content/uploads/2023/03/DSC05830-1024x683.jpg" alt="Plato de Restaurante Ágape en Zamora" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="photo-credit">Ágape</span></div>
+            <div class="bar-card__body">
+              <div class="bar-card__top">
+                <div class="bar-card__no">13</div>
+                <button class="fav" type="button" data-fav="13" aria-label="Guardar favorito">☆</button>
+              </div>
+              <h3>Ágape</h3>
+              <p class="verdict">Útil si quieres comer o cenar sentado en zona centro.</p>
+              <div class="meta-line">
+                <span class="tag">Centro</span>
+                <span class="tag">€€</span>
+                <span class="tag">sentarse</span><span class="tag">gastro</span>
+              </div>
+              <dl>
+                <div class="row"><dt>Pide</dt><dd>Raciones, carnes, croquetas, queso zamorano y platos de carta.</dd></div>
+                <div class="row"><dt>Plan</dt><dd>Más restaurante que barra rápida.</dd></div>
+              </dl>
+              <button class="open-card" type="button" data-open-bar="13">Abrir ficha</button>
+            </div>
+          </article>
+          <article class="bar-card" data-id="14" data-zone="centro" data-type="sentarse clasico" data-dish="raciones brasa" data-price="€€" data-tilt>
+            <div class="bar-card__art has-image"><img src="https://elmesondelzorro.es/wp-content/uploads/2020/03/image-1-150x150.jpg" alt="Guiso casero en El Mesón del Zorro de Zamora" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="photo-credit">Mesón del Zorro</span></div>
+            <div class="bar-card__body">
+              <div class="bar-card__top">
+                <div class="bar-card__no">14</div>
+                <button class="fav" type="button" data-fav="14" aria-label="Guardar favorito">☆</button>
+              </div>
+              <h3>Mesón del Zorro</h3>
+              <p class="verdict">Buena opción si quieres cocina tradicional y no solo barra.</p>
+              <div class="meta-line">
+                <span class="tag">Centro</span>
+                <span class="tag">€€</span>
+                <span class="tag">sentarse</span><span class="tag">clasico</span>
+              </div>
+              <dl>
+                <div class="row"><dt>Pide</dt><dd>Cocido castellano, guisos y carnes a la brasa.</dd></div>
+                <div class="row"><dt>Plan</dt><dd>Comida o cena de plato.</dd></div>
+              </dl>
+              <button class="open-card" type="button" data-open-bar="14">Abrir ficha</button>
+            </div>
+          </article>
+          <article class="bar-card" data-id="15" data-zone="santa" data-type="clasico sentarse" data-dish="raciones" data-price="€€" data-tilt>
+            <div class="bar-card__art has-image"><img src="https://www.elhorno.info/assets/img/tabla/carne.jpg" alt="Tabla de carne en Restaurante El Horno de Zamora" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="photo-credit">El Horno</span></div>
+            <div class="bar-card__body">
+              <div class="bar-card__top">
+                <div class="bar-card__no">15</div>
+                <button class="fav" type="button" data-fav="15" aria-label="Guardar favorito">☆</button>
+              </div>
+              <h3>El Horno</h3>
+              <p class="verdict">Buen comodín para raciones en zona céntrica.</p>
+              <div class="meta-line">
+                <span class="tag">Santa Clara</span>
+                <span class="tag">€€</span>
+                <span class="tag">clasico</span><span class="tag">sentarse</span>
+              </div>
+              <dl>
+                <div class="row"><dt>Pide</dt><dd>Callos, montaditos, tapas y raciones.</dd></div>
+                <div class="row"><dt>Plan</dt><dd>Alternativa céntrica si todo está lleno.</dd></div>
+              </dl>
+              <button class="open-card" type="button" data-open-bar="15">Abrir ficha</button>
+            </div>
+          </article>
+          <article class="bar-card" data-id="16" data-zone="santa" data-type="sentarse clasico" data-dish="raciones" data-price="€€" data-tilt>
+            <div class="bar-card__art has-image"><img src="https://img02.restaurantguru.com/cb6b-Cafeteria-Dolfos-Zamora-food.jpg" alt="Tapas y platos en Cafetería Dolfos de Zamora" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="photo-credit">Dolfos</span></div>
+            <div class="bar-card__body">
+              <div class="bar-card__top">
+                <div class="bar-card__no">16</div>
+                <button class="fav" type="button" data-fav="16" aria-label="Guardar favorito">☆</button>
+              </div>
+              <h3>Dolfos</h3>
+              <p class="verdict">Para una parada tranquila de comida tradicional.</p>
+              <div class="meta-line">
+                <span class="tag">Santa Clara</span>
+                <span class="tag">€€</span>
+                <span class="tag">sentarse</span><span class="tag">clasico</span>
+              </div>
+              <dl>
+                <div class="row"><dt>Pide</dt><dd>Arroz a la zamorana, sopa castellana, tapas y raciones.</dd></div>
+                <div class="row"><dt>Plan</dt><dd>Cocina tradicional en Santa Clara.</dd></div>
+              </dl>
+              <button class="open-card" type="button" data-open-bar="16">Abrir ficha</button>
+            </div>
+          </article>
+          <article class="bar-card" data-id="17" data-zone="marina" data-type="sentarse clasico" data-dish="raciones" data-price="€€" data-tilt>
+            <div class="bar-card__art has-image"><img src="https://cafefontanazamora.com/wp-content/uploads/2024/11/WhatsApp-Image-2024-11-01-at-12.01.31.jpeg" alt="Tapas variadas en Restaurante Fontana de Zamora" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="photo-credit">La Fontana</span></div>
+            <div class="bar-card__body">
+              <div class="bar-card__top">
+                <div class="bar-card__no">17</div>
+                <button class="fav" type="button" data-fav="17" aria-label="Guardar favorito">☆</button>
+              </div>
+              <h3>La Fontana</h3>
+              <p class="verdict">Más tranquilo y local que la zona de Los Lobos.</p>
+              <div class="meta-line">
+                <span class="tag">La Marina</span>
+                <span class="tag">€€</span>
+                <span class="tag">sentarse</span><span class="tag">clasico</span>
+              </div>
+              <dl>
+                <div class="row"><dt>Pide</dt><dd>Jeta de cerdo, arroces y tapas.</dd></div>
+                <div class="row"><dt>Plan</dt><dd>Raciones en zona La Marina.</dd></div>
+              </dl>
+              <button class="open-card" type="button" data-open-bar="17">Abrir ficha</button>
+            </div>
+          </article>
+          <article class="bar-card" data-id="18" data-zone="marina" data-type="sentarse clasico" data-dish="raciones" data-price="€€" data-tilt>
+            <div class="bar-card__art has-image"><img src="https://sancho2.com/wp-content/uploads/2025/03/1.png" alt="Pulpo en La Marina Sancho2 de Zamora" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="photo-credit">La Marina Sancho2</span></div>
+            <div class="bar-card__body">
+              <div class="bar-card__top">
+                <div class="bar-card__no">18</div>
+                <button class="fav" type="button" data-fav="18" aria-label="Guardar favorito">☆</button>
+              </div>
+              <h3>La Marina Sancho 2</h3>
+              <p class="verdict">Para sentarte, compartir raciones y salir del circuito principal.</p>
+              <div class="meta-line">
+                <span class="tag">La Marina</span>
+                <span class="tag">€€</span>
+                <span class="tag">sentarse</span><span class="tag">clasico</span>
+              </div>
+              <dl>
+                <div class="row"><dt>Pide</dt><dd>Pulpo, mollejas y carnes.</dd></div>
+                <div class="row"><dt>Plan</dt><dd>Mesa y raciones.</dd></div>
+              </dl>
+              <button class="open-card" type="button" data-open-bar="18">Abrir ficha</button>
+            </div>
+          </article>
+        </div>
+        <div class="empty-state" data-empty-state hidden>No hay bares con esos filtros. Prueba otra zona o limpia la búsqueda.</div>
+      </div>
+    </section>
+
+    
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="kicker">Dudas rápidas</span>
+            <h2>Antes de salir de tapeo.</h2>
+          </div>
+          <p>Solo lo que ayuda a usar la guía en la calle.</p>
+        </div>
+
+                <div class="faq-list reveal">
+          <article class="faq-item">
+            <button class="faq-q" type="button"><span>¿Dónde empiezo si es mi primera vez?</span><span>+</span></button>
+            <div class="faq-a"><p>Empieza en Los Lobos: El Lobo, Caballero, Pinchitos y Bambú. Es la parte más fácil, cercana y reconocible de la ruta.</p></div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-q" type="button"><span>¿Qué pido en cada parada?</span><span>+</span></button>
+            <div class="faq-a"><p>Sigue la ruta: pincho moruno, figón, pinchos morunos, tiberios, tortilla con callos y una última parada más elaborada.</p></div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-q" type="button"><span>¿Puedo abrir la ruta en Google Maps?</span><span>+</span></button>
+            <div class="faq-a"><p>Sí. En la sección del mapa tienes rutas andando ya montadas para abrirlas directamente en Google Maps.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h2>Guía de tapeo por Zamora.</h2>
+        <p>Una versión visual y móvil para consultar bares, tapas, zonas y ruta recomendada sin perder tiempo comparando reseñas.</p>
+      </div>
+      <div class="source-card">
+        <strong>Criterio editorial</strong>
+        Base: ruta rápida, tapas imprescindibles y bares seleccionados. Los sitios más de restaurante quedan separados del tapeo rápido para no confundir al usuario.
+        <br><br><strong>Imágenes incorporadas</strong>
+        Bar Caballero, EmulsiónGourmet, El País / Emilio Fraile, El Español, RestaurantGuru, Hostelería en Zamora / Rafael Lorenzo, Minube, Ágape, Bayadoliz, Sancho2, La Fontana, El Horno y Wikimedia Commons. Las imágenes externas sirven como maqueta visual; para publicación definitiva conviene usar fotos propias, pedir permiso o respetar licencia/atribución cuando corresponda.
+        <div class="palette" aria-label="Paleta de color">
+          <span class="swatch" style="background:#100907"></span>
+          <span class="swatch" style="background:#761e24"></span>
+          <span class="swatch" style="background:#f4dfbd"></span>
+          <span class="swatch" style="background:#dba441"></span>
+          <span class="swatch" style="background:#667347"></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-cta" aria-label="Acciones rápidas">
+    <a class="main" href="#ruta">Ruta</a>
+    <a href="#bares">Bares</a>
+    <button type="button" data-open-command>Buscar</button>
+  </div>
+
+  <aside class="drawer" data-drawer aria-hidden="true">
+    <div class="drawer__overlay" data-close-drawer></div>
+    <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Detalle del bar">
+      <button class="drawer__close" type="button" data-close-drawer aria-label="Cerrar">×</button>
+      <div class="drawer__hero" data-drawer-hero></div>
+      <div class="drawer__content" data-drawer-content></div>
+    </div>
+  </aside>
+
+  <div class="command" data-command aria-hidden="true">
+    <div class="command__box" role="dialog" aria-modal="true" aria-label="Buscador rápido">
+      <input data-command-input type="search" placeholder="Busca un bar, una tapa o una zona…" />
+      <div class="command__results" data-command-results></div>
+    </div>
+  </div>
+
+  <script>
+    const routeStops = [
+      {
+            "id": 1,
+            "no": "01",
+            "name": "Bar El Lobo",
+            "text": "Pincho moruno: con picante o sin picante.",
+            "walk": "inicio"
+      },
+      {
+            "id": 2,
+            "no": "02",
+            "name": "Bar Caballero",
+            "text": "Figón, patatas mixtas o crestas.",
+            "walk": "2 min"
+      },
+      {
+            "id": 3,
+            "no": "03",
+            "name": "Casa de los Pinchitos",
+            "text": "Pinchos morunos de carne o chorizo.",
+            "walk": "1 min"
+      },
+      {
+            "id": 4,
+            "no": "04",
+            "name": "Bar Bambú",
+            "text": "Tiberios y perdices.",
+            "walk": "2 min"
+      },
+      {
+            "id": 5,
+            "no": "05",
+            "name": "Bar Chillón",
+            "text": "Tortilla con salsa de callos.",
+            "walk": "8 min"
+      },
+      {
+            "id": 6,
+            "no": "06",
+            "name": "Portillo de la Traición",
+            "text": "Gildas, croquetas, oreja y tapas creativas.",
+            "walk": "7 min"
+      }
+];
+
+    const bars = [
+      {
+            "id": 1,
+            "name": "Bar El Lobo",
+            "image": "https://emulsiongourmet.es/wp-content/uploads/2018/08/pincho_moruno_el_lobo.jpg",
+            "imageAlt": "Pincho moruno del Bar El Lobo en Zamora",
+            "imageCredit": "Bar El Lobo",
+            "zone": "lobos",
+            "zoneLabel": "Los Lobos",
+            "type": [
+                  "imprescindible",
+                  "clasico",
+                  "barato"
+            ],
+            "dish": [
+                  "pincho"
+            ],
+            "price": "€",
+            "ask": "Pincho moruno. Con picante: “que sí”. Sin picante: “que no”.",
+            "address": "C. Horno de San Torcuato, 1",
+            "plan": "Primera parada de la ruta.",
+            "verdict": "El sitio clásico para empezar por Los Lobos con un pincho moruno."
+      },
+      {
+            "id": 2,
+            "name": "Bar Caballero",
+            "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/ab/2b/0c/figon.jpg?h=1200&s=1&w=1200",
+            "imageAlt": "Figón de Bar Caballero en Zamora",
+            "imageCredit": "Bar Caballero",
+            "zone": "lobos",
+            "zoneLabel": "Los Lobos",
+            "type": [
+                  "imprescindible",
+                  "clasico",
+                  "barato"
+            ],
+            "dish": [
+                  "figon",
+                  "tortilla",
+                  "raciones"
+            ],
+            "price": "€",
+            "ask": "Figón, patatas mixtas, crestas y callos.",
+            "address": "C. Flores de San Torcuato, 4",
+            "plan": "Parada fácil para probar figón.",
+            "verdict": "Pide figón. Es la parada más clara para entender la ruta."
+      },
+      {
+            "id": 3,
+            "name": "Casa de los Pinchitos",
+            "image": "https://img02.restaurantguru.com/c5b9-La-Casa-de-Los-Pinchitos-Zamora-dishes.jpg",
+            "imageAlt": "Pinchos y barra en La Casa de Los Pinchitos de Zamora",
+            "imageCredit": "Casa de los Pinchitos",
+            "zone": "lobos",
+            "zoneLabel": "Los Lobos",
+            "type": [
+                  "clasico",
+                  "barato"
+            ],
+            "dish": [
+                  "pincho"
+            ],
+            "price": "€",
+            "ask": "Pinchos morunos de carne o chorizo.",
+            "address": "C. Alfonso de Castro, 1",
+            "plan": "Otra parada rápida dentro de Los Lobos.",
+            "verdict": "Buena para seguir con pinchos sin salir de la zona."
+      },
+      {
+            "id": 4,
+            "name": "Bar Bambú",
+            "image": "https://imagenes.elpais.com/resizer/v2/MXBHD2S5WNDFHJCVH32JWXMPFE.jpg?auth=030d99f8abf8c24b84adf490c46856945fb6d4f8b82f02b502105231d7be60f2&width=828",
+            "imageAlt": "Tiberios del Bar Bambú en Zamora",
+            "imageCredit": "Bar Bambú",
+            "zone": "lobos",
+            "zoneLabel": "Los Lobos",
+            "type": [
+                  "imprescindible",
+                  "clasico"
+            ],
+            "dish": [
+                  "tiberios",
+                  "raciones"
+            ],
+            "price": "€",
+            "ask": "Tiberios y perdices.",
+            "address": "C. Alfonso de Castro, 3",
+            "plan": "Parada imprescindible si quieres probar una tapa muy local.",
+            "verdict": "Los tiberios son una de las tapas más reconocibles de Zamora."
+      },
+      {
+            "id": 5,
+            "name": "Bar Chillón",
+            "image": "https://s1.elespanol.com/2024/03/26/castilla-y-leon/region/zamora/842925837_241034392_1706x1925.jpg",
+            "imageAlt": "Tortilla con salsa de callos del Bar Chillón en Zamora",
+            "imageCredit": "Bar Chillón",
+            "zone": "santa",
+            "zoneLabel": "Santa Clara",
+            "type": [
+                  "imprescindible",
+                  "clasico",
+                  "barato"
+            ],
+            "dish": [
+                  "tortilla"
+            ],
+            "price": "€",
+            "ask": "Tortilla con salsa de callos.",
+            "address": "C. Diego de Ordax, 6",
+            "plan": "Parada diferente fuera de Los Lobos.",
+            "verdict": "Tortilla con una salsa muy reconocible. Es de esas tapas que se recuerdan."
+      },
+      {
+            "id": 6,
+            "name": "Portillo de la Traición",
+            "image": "https://img02.restaurantguru.com/c07d-Pub-and-bar-Portillo-de-la-Traicion-food.jpg",
+            "imageAlt": "Tapas creativas de Portillo de la Traición en Zamora",
+            "imageCredit": "Portillo de la Traición",
+            "zone": "centro",
+            "zoneLabel": "Centro",
+            "type": [
+                  "gastro",
+                  "sentarse"
+            ],
+            "dish": [
+                  "raciones"
+            ],
+            "price": "€€",
+            "ask": "Gildas, croquetas, oreja y tapas creativas.",
+            "address": "C. Cervantes, 5",
+            "plan": "Cierre más elaborado después de los clásicos.",
+            "verdict": "Buen cierre si quieres algo más trabajado sin cambiar demasiado de zona."
+      },
+      {
+            "id": 7,
+            "name": "La Vinacoteca",
+            "image": "https://images.mnstatic.com/03/e2/03e2d5e1917c3e47cebdc127ac911347.jpg",
+            "imageAlt": "Interior de La Vinacoteca en Zamora con vinos",
+            "imageCredit": "La Vinacoteca",
+            "zone": "centro",
+            "zoneLabel": "Centro",
+            "type": [
+                  "sentarse",
+                  "clasico"
+            ],
+            "dish": [
+                  "raciones"
+            ],
+            "price": "€",
+            "ask": "Vino, queso, cecina, embutidos y tostas.",
+            "address": "C. Cervantes, 5",
+            "plan": "Aperitivo tranquilo con vino y producto frío.",
+            "verdict": "Buena opción si quieres bajar el ritmo con vino, queso o embutido."
+      },
+      {
+            "id": 8,
+            "name": "Bodega Chori",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Bar_Bodega_Chori_03.jpg",
+            "imageAlt": "Chorizo zamorano en Bar Bodega Chori",
+            "imageCredit": "Bodega Chori",
+            "zone": "herreros",
+            "zoneLabel": "Herreros",
+            "type": [
+                  "clasico",
+                  "barato"
+            ],
+            "dish": [
+                  "brasa",
+                  "pincho"
+            ],
+            "price": "€",
+            "ask": "Chorizo a la brasa, morcilla y pinchos.",
+            "address": "C. Los Herreros, 36",
+            "plan": "Brasa sencilla en la zona de Herreros.",
+            "verdict": "Parada directa para chorizo a la brasa y algo rápido."
+      },
+      {
+            "id": 9,
+            "name": "Mesón Bayadoliz",
+            "image": "https://www.bayadoliz.es/wp-content/uploads/2025/10/meson-bayadoliz-en-zamora.jpg",
+            "imageAlt": "Fachada de Mesón Bayadoliz en Zamora",
+            "imageCredit": "Mesón Bayadoliz",
+            "zone": "herreros",
+            "zoneLabel": "Herreros",
+            "type": [
+                  "clasico",
+                  "barato"
+            ],
+            "dish": [
+                  "raciones"
+            ],
+            "price": "€",
+            "ask": "Oreja, champiñones, cachuelas, alitas y montados.",
+            "address": "C. Los Herreros, 7",
+            "plan": "Segunda ronda por Herreros.",
+            "verdict": "Opción clásica para raciones y ambiente de calle Herreros."
+      },
+      {
+            "id": 10,
+            "name": "Los Abuelos I",
+            "image": "https://hosteleriaenzamora.com/wp-content/uploads/2019/02/IMG-20190227-WA0108-1024x683.jpg",
+            "imageAlt": "Tapa a la plancha en Bar Los Abuelos I de Zamora",
+            "imageCredit": "Los Abuelos I",
+            "zone": "herreros",
+            "zoneLabel": "Herreros",
+            "type": [
+                  "clasico",
+                  "sentarse"
+            ],
+            "dish": [
+                  "raciones",
+                  "brasa"
+            ],
+            "price": "€€",
+            "ask": "Mollejas, champis, pinchos, oreja y sepia.",
+            "address": "C. Los Herreros, 4",
+            "plan": "Plancha tradicional.",
+            "verdict": "Para tapas de plancha y raciones en una zona muy de tapeo."
+      },
+      {
+            "id": 11,
+            "name": "La Herrería",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Bar_La_Herreria_01.jpg",
+            "imageAlt": "Interior de Bar La Herrería en Zamora",
+            "imageCredit": "La Herrería",
+            "zone": "herreros",
+            "zoneLabel": "Herreros",
+            "type": [
+                  "sentarse",
+                  "clasico"
+            ],
+            "dish": [
+                  "raciones"
+            ],
+            "price": "€€",
+            "ask": "Arroz a la zamorana y bacalao con pisto.",
+            "address": "C. Los Herreros, 1",
+            "plan": "Para comer algo más de plato.",
+            "verdict": "Mejor para sentarse que para una ruta rápida de barra."
+      },
+      {
+            "id": 12,
+            "name": "Los Caprichos de Meneses",
+            "image": "https://img02.restaurantguru.com/c641-Pub-and-bar-Los-Caprichos-De-Meneses-food.jpg",
+            "imageAlt": "Platos y tapas de Los Caprichos de Meneses en Zamora",
+            "imageCredit": "Los Caprichos de Meneses",
+            "zone": "centro",
+            "zoneLabel": "Centro",
+            "type": [
+                  "sentarse",
+                  "gastro"
+            ],
+            "dish": [
+                  "raciones"
+            ],
+            "price": "€€€",
+            "ask": "Bacalaos, foie, tapas elaboradas y vino.",
+            "address": "Plazuela de San Miguel, 1",
+            "plan": "Cena tranquila cerca de Plaza Mayor.",
+            "verdict": "Para sentarte y cenar mejor, no para hacer una parada rápida."
+      },
+      {
+            "id": 13,
+            "name": "Ágape",
+            "image": "https://restauranteagapezamora.com/wp-content/uploads/2023/03/DSC05830-1024x683.jpg",
+            "imageAlt": "Plato de Restaurante Ágape en Zamora",
+            "imageCredit": "Ágape",
+            "zone": "centro",
+            "zoneLabel": "Centro",
+            "type": [
+                  "sentarse",
+                  "gastro"
+            ],
+            "dish": [
+                  "raciones"
+            ],
+            "price": "€€",
+            "ask": "Raciones, carnes, croquetas, queso zamorano y platos de carta.",
+            "address": "Plazuela de San Miguel, 3",
+            "plan": "Más restaurante que barra rápida.",
+            "verdict": "Útil si quieres comer o cenar sentado en zona centro."
+      },
+      {
+            "id": 14,
+            "name": "Mesón del Zorro",
+            "image": "https://elmesondelzorro.es/wp-content/uploads/2020/03/image-1-150x150.jpg",
+            "imageAlt": "Guiso casero en El Mesón del Zorro de Zamora",
+            "imageCredit": "Mesón del Zorro",
+            "zone": "centro",
+            "zoneLabel": "Centro",
+            "type": [
+                  "sentarse",
+                  "clasico"
+            ],
+            "dish": [
+                  "raciones",
+                  "brasa"
+            ],
+            "price": "€€",
+            "ask": "Cocido castellano, guisos y carnes a la brasa.",
+            "address": "C. Brahones, 4",
+            "plan": "Comida o cena de plato.",
+            "verdict": "Buena opción si quieres cocina tradicional y no solo barra."
+      },
+      {
+            "id": 15,
+            "name": "El Horno",
+            "image": "https://www.elhorno.info/assets/img/tabla/carne.jpg",
+            "imageAlt": "Tabla de carne en Restaurante El Horno de Zamora",
+            "imageCredit": "El Horno",
+            "zone": "santa",
+            "zoneLabel": "Santa Clara",
+            "type": [
+                  "clasico",
+                  "sentarse"
+            ],
+            "dish": [
+                  "raciones"
+            ],
+            "price": "€€",
+            "ask": "Callos, montaditos, tapas y raciones.",
+            "address": "C. Renova, 11",
+            "plan": "Alternativa céntrica si todo está lleno.",
+            "verdict": "Buen comodín para raciones en zona céntrica."
+      },
+      {
+            "id": 16,
+            "name": "Dolfos",
+            "image": "https://img02.restaurantguru.com/cb6b-Cafeteria-Dolfos-Zamora-food.jpg",
+            "imageAlt": "Tapas y platos en Cafetería Dolfos de Zamora",
+            "imageCredit": "Dolfos",
+            "zone": "santa",
+            "zoneLabel": "Santa Clara",
+            "type": [
+                  "sentarse",
+                  "clasico"
+            ],
+            "dish": [
+                  "raciones"
+            ],
+            "price": "€€",
+            "ask": "Arroz a la zamorana, sopa castellana, tapas y raciones.",
+            "address": "C. Santa Clara, 26",
+            "plan": "Cocina tradicional en Santa Clara.",
+            "verdict": "Para una parada tranquila de comida tradicional."
+      },
+      {
+            "id": 17,
+            "name": "La Fontana",
+            "image": "https://cafefontanazamora.com/wp-content/uploads/2024/11/WhatsApp-Image-2024-11-01-at-12.01.31.jpeg",
+            "imageAlt": "Tapas variadas en Restaurante Fontana de Zamora",
+            "imageCredit": "La Fontana",
+            "zone": "marina",
+            "zoneLabel": "La Marina",
+            "type": [
+                  "sentarse",
+                  "clasico"
+            ],
+            "dish": [
+                  "raciones"
+            ],
+            "price": "€€",
+            "ask": "Jeta de cerdo, arroces y tapas.",
+            "address": "Jardines Eduardo Barrón, 1",
+            "plan": "Raciones en zona La Marina.",
+            "verdict": "Más tranquilo y local que la zona de Los Lobos."
+      },
+      {
+            "id": 18,
+            "name": "La Marina Sancho 2",
+            "image": "https://sancho2.com/wp-content/uploads/2025/03/1.png",
+            "imageAlt": "Pulpo en La Marina Sancho2 de Zamora",
+            "imageCredit": "La Marina Sancho2",
+            "zone": "marina",
+            "zoneLabel": "La Marina",
+            "type": [
+                  "sentarse",
+                  "clasico"
+            ],
+            "dish": [
+                  "raciones"
+            ],
+            "price": "€€",
+            "ask": "Pulpo, mollejas y carnes.",
+            "address": "Plaza Marina Española, s/n",
+            "plan": "Mesa y raciones.",
+            "verdict": "Para sentarte, compartir raciones y salir del circuito principal."
+      }
+];
+
+
+    const routePlans = {
+      essential: {
+        title: 'Ruta esencial · 6 paradas',
+        mapLabel: 'Ruta esencial',
+        embedOrigin: 'Bar El Lobo, Zamora',
+        embedDestination: 'Portillo de la Traición, Zamora',
+        origin: 'Bar El Lobo, C. Horno de San Torcuato, 1, Zamora',
+        destination: 'Portillo de la Traición, C. Cervantes, 5, Zamora',
+        waypoints: [
+          'Bar Caballero, C. Flores de San Torcuato, 4, Zamora',
+          'Casa de los Pinchitos, C. Alfonso de Castro, 1, Zamora',
+          'Bar Bambú, C. Alfonso de Castro, 3, Zamora',
+          'Bar Chillón, C. Diego de Ordax, 6, Zamora'
+        ],
+        travelmode: 'walking'
+      },
+      lobos: {
+        title: 'Solo Los Lobos · ruta rápida',
+        mapLabel: 'Los Lobos',
+        embedOrigin: 'Bar El Lobo, Zamora',
+        embedDestination: 'Bar Bambú, Zamora',
+        origin: 'Bar El Lobo, C. Horno de San Torcuato, 1, Zamora',
+        destination: 'Bar Bambú, C. Alfonso de Castro, 3, Zamora',
+        waypoints: [
+          'Bar Caballero, C. Flores de San Torcuato, 4, Zamora',
+          'Casa de los Pinchitos, C. Alfonso de Castro, 1, Zamora'
+        ],
+        travelmode: 'walking'
+      },
+      herreros: {
+        title: 'Los Lobos + Herreros',
+        mapLabel: 'Noche clásica',
+        embedOrigin: 'Bar El Lobo, Zamora',
+        embedDestination: 'Bodega Chori, Zamora',
+        origin: 'Bar El Lobo, C. Horno de San Torcuato, 1, Zamora',
+        destination: 'Bodega Chori, C. Los Herreros, 36, Zamora',
+        waypoints: [
+          'Bar Bambú, C. Alfonso de Castro, 3, Zamora',
+          'Mesón Bayadoliz, C. Los Herreros, 7, Zamora',
+          'Los Abuelos I, C. Los Herreros, 4, Zamora'
+        ],
+        travelmode: 'walking'
+      },
+      tranquila: {
+        title: 'Sentarse y cenar',
+        mapLabel: 'Centro y La Marina',
+        embedOrigin: 'Portillo de la Traición, Zamora',
+        embedDestination: 'La Marina Sancho 2, Zamora',
+        origin: 'Portillo de la Traición, C. Cervantes, 5, Zamora',
+        destination: 'La Marina Sancho 2, Plaza Marina Española, Zamora',
+        waypoints: [
+          'Los Caprichos de Meneses, Plazuela de San Miguel, 1, Zamora',
+          'La Fontana, Jardines Eduardo Barrón, 1, Zamora'
+        ],
+        travelmode: 'walking'
+      }
+    };
+
+    const routeMeta = {
+      essential: {
+        title: 'Ruta esencial',
+        copy: 'Para una primera noche en Zamora: Los Lobos, una parada diferente y cierre más tranquilo.',
+        stops: ['Bar El Lobo', 'Bar Caballero', 'Casa de los Pinchitos', 'Bar Bambú', 'Bar Chillón', 'Portillo de la Traición']
+      },
+      lobos: {
+        title: 'Solo Los Lobos',
+        copy: 'La opción corta: cuatro paradas muy cerca para probar pincho moruno, figón y tiberios sin moverte de la zona.',
+        stops: ['Bar El Lobo', 'Bar Caballero', 'Casa de los Pinchitos', 'Bar Bambú']
+      },
+      herreros: {
+        title: 'Los Lobos + Herreros',
+        copy: 'Para alargar la noche: empiezas por lo clásico y acabas con brasa, plancha y más ambiente.',
+        stops: ['Bar El Lobo', 'Bar Bambú', 'Mesón Bayadoliz', 'Los Abuelos I', 'Bodega Chori']
+      },
+      tranquila: {
+        title: 'Sentarse y cenar',
+        copy: 'Cuando no quieres ir de barra en barra: menos ruido, más mesa y paradas para comer con calma.',
+        stops: ['Portillo de la Traición', 'Los Caprichos de Meneses', 'La Fontana', 'La Marina Sancho 2']
+      }
+    };
+
+    const state = { zone:'all', type:'all', dish:'all', price:'all', search:'' };
+    const els = {
+      progress: document.querySelector('[data-progress]'),
+      cursor: document.querySelector('[data-cursor]'),
+      routeList: document.querySelector('#routeList'),
+      barsGrid: document.querySelector('#barsGrid'),
+      count: document.querySelector('[data-results-count]'),
+      empty: document.querySelector('[data-empty-state]'),
+      search: document.querySelector('[data-search]'),
+      drawer: document.querySelector('[data-drawer]'),
+      drawerContent: document.querySelector('[data-drawer-content]'),
+      drawerHero: document.querySelector('[data-drawer-hero]'),
+      command: document.querySelector('[data-command]'),
+      commandInput: document.querySelector('[data-command-input]'),
+      commandResults: document.querySelector('[data-command-results]'),
+      mapFrame: document.querySelector('[data-google-map]'),
+      routeMapTitle: document.querySelector('[data-route-map-title]'),
+      currentRouteLinks: document.querySelectorAll('[data-current-route-link]'),
+      routePanelTitle: document.querySelector('[data-route-panel-title]'),
+      routePanelCopy: document.querySelector('[data-route-panel-copy]'),
+      routePanelStops: document.querySelector('[data-route-panel-stops]'),
+      copyRoute: document.querySelector('[data-copy-route]'),
+      nav: document.querySelector('[data-nav]')
+    };
+
+    const safeStorage = {
+      get(){
+        try { return JSON.parse(localStorage.getItem('zamoraTapeoFavs') || '[]'); }
+        catch(error){ return []; }
+      },
+      set(value){
+        try { localStorage.setItem('zamoraTapeoFavs', JSON.stringify(value)); }
+        catch(error){}
+      }
+    };
+    const favorites = new Set(safeStorage.get());
+
+    function normalize(text){
+      return String(text).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+    }
+
+    function renderRoute(){
+      els.routeList.innerHTML = routeStops.map(stop => {
+        const bar = bars.find(item => item.id === stop.id) || {};
+        return `
+          <article class="route-stop" data-route-stop="${stop.id}" data-id="${stop.id}" data-tilt>
+            <div class="route-stop__no">${stop.no}</div>
+            <div class="route-stop__media">
+              ${bar.image ? `<img src="${bar.image}" alt="${bar.imageAlt || stop.name}" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="photo-credit">${bar.imageCredit || stop.name}</span>` : ''}
+            </div>
+            <div class="route-stop__content">
+              <h4>${stop.name}</h4>
+              <p>${stop.text}</p>
+              <p class="route-stop__ask"><strong>Qué pedir</strong>${bar.ask || stop.text}</p>
+              <div class="route-stop__actions">
+                <a href="${googleSearchUrl(googleQueryForBar(bar))}" target="_blank" rel="noopener">Abrir parada en Maps</a>
+                <button type="button" data-pin="${stop.id}" data-id="${stop.id}">Ver ficha</button>
+              </div>
+            </div>
+            <span class="walk-pill">${stop.walk}</span>
+          </article>
+        `;
+      }).join('');
+    }
+
+    function barMatches(bar){
+      const haystack = normalize([bar.name, bar.zoneLabel, bar.ask, bar.address, bar.plan, bar.verdict, bar.price, ...bar.type, ...bar.dish].join(' '));
+      const searchOk = !state.search || haystack.includes(normalize(state.search));
+      const zoneOk = state.zone === 'all' || bar.zone === state.zone;
+      const typeOk = state.type === 'all' || bar.type.includes(state.type);
+      const dishOk = state.dish === 'all' || bar.dish.includes(state.dish);
+      const priceOk = state.price === 'all' || bar.price === state.price;
+      return searchOk && zoneOk && typeOk && dishOk && priceOk;
+    }
+
+    function renderBars(){
+      const filtered = bars.filter(barMatches);
+      els.count.textContent = filtered.length;
+      els.empty.hidden = filtered.length > 0;
+
+      els.barsGrid.innerHTML = filtered.map(bar => `
+        <article class="bar-card" data-id="${bar.id}" data-zone="${bar.zone}" data-tilt>
+          <div class="bar-card__art ${bar.image ? 'has-image' : ''}">
+            ${bar.image ? `<img src="${bar.image}" alt="${bar.imageAlt || bar.name}" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="photo-credit">${bar.imageCredit || ''}</span>` : ''}
+          </div>
+          <div class="bar-card__body">
+            <div class="bar-card__top">
+              <div class="bar-card__no">${String(bar.id).padStart(2,'0')}</div>
+              <button class="fav ${favorites.has(bar.id) ? 'is-active' : ''}" type="button" data-fav="${bar.id}" aria-label="Guardar favorito">${favorites.has(bar.id) ? '★' : '☆'}</button>
+            </div>
+            <h3>${bar.name}</h3>
+            <p class="verdict">${bar.verdict}</p>
+            <div class="meta-line">
+              <span class="tag">${bar.zoneLabel}</span>
+              <span class="tag">${bar.price}</span>
+              ${bar.type.slice(0,2).map(type => `<span class="tag">${type}</span>`).join('')}
+            </div>
+            <dl>
+              <div class="row"><dt>Pide</dt><dd>${bar.ask}</dd></div>
+              <div class="row"><dt>Plan</dt><dd>${bar.plan}</dd></div>
+            </dl>
+            <button class="open-card" type="button" data-open-bar="${bar.id}">Abrir ficha</button>
+          </div>
+        </article>
+      `).join('');
+      initTilt();
+      highlightMap();
+    }
+
+    function applyFilters({scroll=false} = {}){
+      renderBars();
+      document.querySelectorAll('[data-filter-group]').forEach(button => {
+        const group = button.dataset.filterGroup;
+        button.classList.toggle('is-active', state[group] === button.dataset.filterValue);
+      });
+      document.querySelectorAll('[data-map-zone], [data-quick-zone]').forEach(button => {
+        const zone = button.dataset.mapZone || button.dataset.quickZone;
+        button.classList.toggle('is-active', state.zone === zone);
+      });
+      if(scroll) document.querySelector('#bares').scrollIntoView({behavior:'smooth', block:'start'});
+    }
+
+    function clearFilters(){
+      state.zone = state.type = state.dish = state.price = 'all';
+      state.search = '';
+      els.search.value = '';
+      applyFilters();
+    }
+
+    function googleEmbedSrc(query, zoom = 16){
+      return `https://maps.google.com/maps?q=${encodeURIComponent(query)}&t=&z=${zoom}&ie=UTF8&iwloc=&output=embed`;
+    }
+
+    function googleSearchUrl(query){
+      return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+    }
+
+    function googleDirectionsUrl(plan){
+      const params = new URLSearchParams({
+        api: '1',
+        origin: plan.origin,
+        destination: plan.destination,
+        travelmode: plan.travelmode || 'walking'
+      });
+      if(plan.waypoints && plan.waypoints.length) params.set('waypoints', plan.waypoints.join('|'));
+      return `https://www.google.com/maps/dir/?${params.toString()}`;
+    }
+
+    function googleEmbedDirectionsSrc(plan){
+      const daddr = [...(plan.waypoints || []), plan.embedDestination || plan.destination].join(' to ');
+      return `https://maps.google.com/maps?f=d&source=s_d&saddr=${encodeURIComponent(plan.embedOrigin || plan.origin)}&daddr=${encodeURIComponent(daddr)}&dirflg=w&output=embed`;
+    }
+
+    let activeRouteKey = 'essential';
+
+    function setRouteMap(key){
+      activeRouteKey = key;
+      const plan = routePlans[key] || routePlans.essential;
+      const meta = routeMeta[key] || routeMeta.essential;
+      const routeUrl = googleDirectionsUrl(plan);
+
+      if(els.routeMapTitle) els.routeMapTitle.textContent = plan.title;
+      if(els.currentRouteLinks) els.currentRouteLinks.forEach(link => link.href = routeUrl);
+      if(els.routePanelTitle) els.routePanelTitle.textContent = meta.title;
+      if(els.routePanelCopy) els.routePanelCopy.textContent = meta.copy;
+      if(els.routePanelStops) els.routePanelStops.innerHTML = meta.stops.map(stop => `<li>${stop}</li>`).join('');
+
+      document.querySelectorAll('[data-route-link]').forEach(link => {
+        const item = routePlans[link.dataset.routeLink];
+        if(item) link.href = googleDirectionsUrl(item);
+      });
+      document.querySelectorAll('[data-route-map]').forEach(button => {
+        button.classList.toggle('is-active', button.dataset.routeMap === key);
+      });
+      if(els.mapFrame) els.mapFrame.src = googleEmbedDirectionsSrc(plan);
+    }
+
+    function routeShareText(key){
+      const plan = routePlans[key] || routePlans.essential;
+      const meta = routeMeta[key] || routeMeta.essential;
+      return `${meta.title}
+${meta.stops.join(' → ')}
+${googleDirectionsUrl(plan)}`;
+    }
+
+    function googleQueryForBar(bar){
+      return `${bar.name}, ${bar.address || bar.zoneLabel}, Zamora`;
+    }
+
+    function updateGoogleMap(query, zoom = 16){
+      if(!els.mapFrame || !query) return;
+      els.mapFrame.src = googleEmbedSrc(query, zoom);
+    }
+
+    function highlightMap(){
+      document.querySelectorAll('[data-pin]').forEach(pin => {
+        const id = Number(pin.dataset.id);
+        const bar = bars.find(b => b.id === id);
+        pin.classList.toggle('is-active', !!bar && barMatches(bar));
+      });
+    }
+
+    function openBar(id){
+      const bar = bars.find(b => b.id === Number(id));
+      if(!bar) return;
+      if(els.drawerHero){
+        els.drawerHero.classList.toggle('has-image', !!bar.image);
+        els.drawerHero.innerHTML = bar.image ? `<img src="${bar.image}" alt="${bar.imageAlt || bar.name}" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="photo-credit">${bar.imageCredit || ''}</span>` : '';
+      }
+      els.drawerContent.innerHTML = `
+        <span class="tag">${bar.zoneLabel} · ${bar.price}</span>
+        <h3>${bar.name}</h3>
+        <p class="verdict">${bar.verdict}</p>
+        <div class="drawer-list">
+          <div class="drawer-row"><strong>Qué pedir</strong>${bar.ask}</div>
+          <div class="drawer-row"><strong>Dirección</strong>${bar.address}</div>
+          <div class="drawer-row"><strong>Plan</strong>${bar.plan}</div>
+          <div class="drawer-row"><strong>Tipo</strong>${bar.type.join(' · ')}</div>
+        </div>
+        <div class="hero__actions" style="margin-top:1rem">
+          <button class="btn btn--main" type="button" data-drawer-fav="${bar.id}">${favorites.has(bar.id) ? 'Quitar favorito' : 'Guardar favorito'}</button>
+          <a class="btn" href="${googleSearchUrl(googleQueryForBar(bar))}" target="_blank" rel="noopener">Abrir en Maps</a>
+          <button class="btn" type="button" onclick="window.print()">Guardar PDF</button>
+        </div>
+      `;
+      els.drawer.classList.add('is-open');
+      els.drawer.setAttribute('aria-hidden','false');
+    }
+
+    function closeDrawer(){
+      els.drawer.classList.remove('is-open');
+      els.drawer.setAttribute('aria-hidden','true');
+    }
+
+    function toggleFavorite(id){
+      id = Number(id);
+      if(favorites.has(id)) favorites.delete(id); else favorites.add(id);
+      safeStorage.set([...favorites]);
+      renderBars();
+      const bar = bars.find(b => b.id === id);
+      if(els.drawer.classList.contains('is-open') && bar) openBar(id);
+    }
+
+    function openCommand(){
+      els.command.classList.add('is-open');
+      els.command.setAttribute('aria-hidden','false');
+      els.commandInput.value = '';
+      renderCommandResults('');
+      setTimeout(() => els.commandInput.focus(), 30);
+    }
+
+    function closeCommand(){
+      els.command.classList.remove('is-open');
+      els.command.setAttribute('aria-hidden','true');
+    }
+
+    function renderCommandResults(query){
+      const q = normalize(query);
+      const results = bars.filter(bar => !q || normalize(`${bar.name} ${bar.zoneLabel} ${bar.ask} ${bar.verdict}`).includes(q)).slice(0,8);
+      els.commandResults.innerHTML = results.map(bar => `
+        <button class="command__result" data-command-open="${bar.id}">
+          ${String(bar.id).padStart(2,'0')} · ${bar.name} — ${bar.ask}
+        </button>
+      `).join('') || '<div class="command__result">Sin resultados.</div>';
+    }
+
+    function initTilt(){
+      if(window.matchMedia('(pointer: coarse)').matches || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      document.querySelectorAll('[data-tilt]').forEach(card => {
+        if(card.dataset.tiltBound) return;
+        card.dataset.tiltBound = 'true';
+        card.addEventListener('mousemove', event => {
+          const rect = card.getBoundingClientRect();
+          const x = (event.clientX - rect.left) / rect.width - .5;
+          const y = (event.clientY - rect.top) / rect.height - .5;
+          card.style.transform = `perspective(900px) rotateX(${(-y * 5).toFixed(2)}deg) rotateY(${(x * 6).toFixed(2)}deg) translateY(-2px)`;
+        });
+        card.addEventListener('mouseleave', () => card.style.transform = '');
+      });
+    }
+
+    function initReveals(){
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting) entry.target.classList.add('is-visible');
+        });
+      }, {threshold:.15});
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    }
+
+    function initScrollSpy(){
+      const sections = document.querySelectorAll('main section[id]');
+      const links = document.querySelectorAll('[data-section-link]');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if(!entry.isIntersecting) return;
+          links.forEach(link => link.classList.toggle('is-active', link.getAttribute('href') === `#${entry.target.id}`));
+        });
+      }, {rootMargin:'-40% 0px -50% 0px', threshold:0});
+      sections.forEach(section => observer.observe(section));
+    }
+
+    function updateProgress(){
+      const max = document.documentElement.scrollHeight - innerHeight;
+      els.progress.style.width = `${Math.max(0, Math.min(100, scrollY / max * 100))}%`;
+    }
+
+    function initParallax(){
+      if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      let ticking = false;
+      const items = document.querySelectorAll('[data-parallax]');
+      function run(){
+        const y = window.scrollY;
+        items.forEach(item => {
+          const depth = Number(item.dataset.parallax);
+          item.style.transform = `translate3d(0, ${y * depth}px, 0)`;
+        });
+        ticking = false;
+      }
+      window.addEventListener('scroll', () => {
+        updateProgress();
+        if(!ticking){ requestAnimationFrame(run); ticking = true; }
+      }, {passive:true});
+    }
+
+    function initCursor(){
+      if(!els.cursor || window.matchMedia('(pointer: coarse)').matches) return;
+      document.addEventListener('mousemove', event => {
+        els.cursor.style.opacity = '1';
+        els.cursor.style.left = `${event.clientX}px`;
+        els.cursor.style.top = `${event.clientY}px`;
+      });
+      document.addEventListener('mouseleave', () => els.cursor.style.opacity = '0');
+    }
+
+    document.addEventListener('click', event => {
+      const filter = event.target.closest('[data-filter-group]');
+      if(filter){
+        const group = filter.dataset.filterGroup;
+        const value = filter.dataset.filterValue;
+        state[group] = state[group] === value ? 'all' : value;
+        applyFilters();
+      }
+
+      const routeMap = event.target.closest('[data-route-map]');
+      if(routeMap){
+        setRouteMap(routeMap.dataset.routeMap);
+      }
+
+      const zone = event.target.closest('[data-map-zone], [data-quick-zone]');
+      if(zone){
+        state.zone = zone.dataset.mapZone || zone.dataset.quickZone;
+        updateGoogleMap(zone.dataset.mapQuery, Number(zone.dataset.mapZoom || 16));
+        applyFilters({scroll:true});
+      }
+
+      if(event.target.closest('[data-clear-filters]')) clearFilters();
+
+      const pin = event.target.closest('[data-pin]');
+      if(pin){
+        const bar = bars.find(b => b.id === Number(pin.dataset.id));
+        if(bar) updateGoogleMap(googleQueryForBar(bar), 17);
+        openBar(pin.dataset.id);
+      }
+
+      const open = event.target.closest('[data-open-bar]');
+      if(open) openBar(open.dataset.openBar);
+
+      const fav = event.target.closest('[data-fav], [data-drawer-fav]');
+      if(fav) toggleFavorite(fav.dataset.fav || fav.dataset.drawerFav);
+
+      if(event.target.closest('[data-close-drawer]')) closeDrawer();
+
+      if(event.target.closest('[data-open-command]')) openCommand();
+
+      const commandOpen = event.target.closest('[data-command-open]');
+      if(commandOpen){
+        closeCommand();
+        openBar(commandOpen.dataset.commandOpen);
+      }
+
+      const faq = event.target.closest('.faq-q');
+      if(faq) faq.closest('.faq-item').classList.toggle('is-open');
+
+      if(event.target.closest('[data-print]')) window.print();
+
+      if(event.target.closest('[data-menu-toggle]')){
+        const button = event.target.closest('[data-menu-toggle]');
+        const isOpen = els.nav.classList.toggle('is-open');
+        button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      }
+    });
+
+    els.search.addEventListener('input', event => {
+      state.search = event.target.value;
+      applyFilters();
+    });
+
+    els.commandInput.addEventListener('input', event => renderCommandResults(event.target.value));
+
+    document.addEventListener('keydown', event => {
+      if((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k'){
+        event.preventDefault();
+        openCommand();
+      }
+      if(event.key === 'Escape'){
+        closeCommand();
+        closeDrawer();
+      }
+    });
+
+    document.querySelector('[data-command]').addEventListener('click', event => {
+      if(event.target.matches('[data-command]')) closeCommand();
+    });
+
+    document.querySelector('[data-share]').addEventListener('click', async () => {
+      const payload = { title: document.title, text: 'Guía de tapeo por Zamora', url: location.href };
+      if(navigator.share){
+        try{ await navigator.share(payload); } catch(e){}
+      } else {
+        await navigator.clipboard.writeText(location.href);
+        alert('Enlace copiado');
+      }
+    });
+
+    try { setRouteMap('essential'); } catch(error) { console.warn('Mapa no inicializado', error); }
+    try { renderRoute(); } catch(error) { console.warn('Ruta no inicializada', error); }
+    try { applyFilters(); } catch(error) { console.warn('Bares no inicializados', error); }
+    try { initTilt(); } catch(error) {}
+    try { initReveals(); } catch(error) {}
+    try { initScrollSpy(); } catch(error) {}
+    try { initParallax(); } catch(error) {}
+    try { initCursor(); } catch(error) {}
+    try { updateProgress(); } catch(error) {}
+  </script>
+</body>
+</html>
